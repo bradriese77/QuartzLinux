@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QuartzSchedulerModelStoreContainer" CdmEntityContainer="QuartzSchedulerEntities1">
+    <EntitySetMapping Name="QRTZ_JOB_HISTORY">
+      <EntityTypeMapping TypeName="QuartzSchedulerModel.QRTZ_JOB_HISTORY">
+        <MappingFragment StoreEntitySet="QRTZ_JOB_HISTORY">
+          <ScalarProperty Name="JOB_HISTORY_ID" ColumnName="JOB_HISTORY_ID" />
+          <ScalarProperty Name="SCHED_NAME" ColumnName="SCHED_NAME" />
+          <ScalarProperty Name="JOB_NAME" ColumnName="JOB_NAME" />
+          <ScalarProperty Name="JOB_GROUP" ColumnName="JOB_GROUP" />
+          <ScalarProperty Name="DETAIL" ColumnName="DETAIL" />
+          <ScalarProperty Name="STARTDATE" ColumnName="STARTDATE" />
+          <ScalarProperty Name="ENDDATE" ColumnName="ENDDATE" />
+          <ScalarProperty Name="RECORDDATE" ColumnName="RECORDDATE" />
+          <ScalarProperty Name="ISEXCEPTION" ColumnName="ISEXCEPTION" />
+          <ScalarProperty Name="LOGFILE" ColumnName="LOGFILE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,78 @@
+﻿
+@{
+    ViewBag.Title = "LogViewer";
+}
+
+<script>
+    function get(name) {
+        if (name = (new RegExp('[?&]' + encodeURIComponent(name) + '=([^&]*)')).exec(location.search))
+            return decodeURIComponent(name[1]);
+    }
+    function showlog() {
+        logviewer.innerHTML = '';
+        var url = base_url + 'GetLogFile?LogFilePath=' + encodeURI($("#autocomplete").val());
+      <!--  alert(url);-->
+        $.ajax({
+            type: "GET",
+            url: url,
+            dataType: 'json',
+            success: function (data) {
+   <!-- alert(data);-->
+                logviewer.innerHTML = data.join('&#013;&#010;');
+            },
+            error: function (error) {
+               alert(error.responseText);
+            }
+        });
+    }
+    $(function () {
+
+        var url = base_url + 'Home/GetLogFiles';
+        $.ajax({
+            type: "GET",
+            url: url,
+            dataType: 'json',
+            success: function (data) {
+
+
+                $("#autocomplete").autocomplete(
+                    {
+                        select: function (event, ui) {
+                            $("#autocomplete").val(ui.item.label);
+                            showlog();
+                            return false;
+                        },
+                        minLength: 0,
+                        source: data
+                    }).focus(function () {
+                        $(this).autocomplete("search", $(this).val());
+                    })
+            }
+        });
+
+        var LogFilePath = get('LogFilePath');
+        if (LogFilePath != undefined && LogFilePath.length > 0) {
+
+            $("#autocomplete").val(get('LogFilePath'));
+            showlog();
+        }
+
+    });
+</script>
+<br />
+<label>LogFilePath</label>
+<div id="main" style="width:100%">
+
+        <input type="text" id="autocomplete" style="width:99%" />
+
+
+
+
+    <br />
+    <br />
+ <label>Contents</label>
+    <br />
+<textarea id="logviewer" style="width:99%;height:75vh;overflow-x:scroll;overflow-wrap:normal;white-space:pre">
+
+</textarea>
+</div>

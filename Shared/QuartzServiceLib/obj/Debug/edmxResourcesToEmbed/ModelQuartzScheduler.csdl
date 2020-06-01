@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuartzSchedulerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="QRTZ_JOB_HISTORY">
+    <Key>
+      <PropertyRef Name="JOB_HISTORY_ID" />
+    </Key>
+    <Property Name="JOB_HISTORY_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SCHED_NAME" Type="String" MaxLength="120" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="JOB_NAME" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="JOB_GROUP" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DETAIL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="STARTDATE" Type="DateTime" Precision="7" />
+    <Property Name="ENDDATE" Type="DateTime" Precision="7" />
+    <Property Name="RECORDDATE" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="ISEXCEPTION" Type="Boolean" />
+    <Property Name="LOGFILE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="QuartzSchedulerEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="QRTZ_JOB_HISTORY" EntityType="Self.QRTZ_JOB_HISTORY" />
+  </EntityContainer>
+</Schema>

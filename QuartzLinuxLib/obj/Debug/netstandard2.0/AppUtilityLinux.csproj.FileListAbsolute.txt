@@ -1,0 +1,8 @@
+/home/riese/Projects/QuartzLinux/AppUtilityLinux/obj/Debug/netstandard2.0/AppUtilityLinux.csprojAssemblyReference.cache
+/home/riese/Projects/QuartzLinux/AppUtilityLinux/obj/Debug/netstandard2.0/AppUtilityLinux.AssemblyInfoInputs.cache
+/home/riese/Projects/QuartzLinux/AppUtilityLinux/obj/Debug/netstandard2.0/AppUtilityLinux.AssemblyInfo.cs
+/home/riese/Projects/QuartzLinux/AppUtilityLinux/bin/Debug/netstandard2.0/AppUtilityLinux.deps.json
+/home/riese/Projects/QuartzLinux/AppUtilityLinux/bin/Debug/netstandard2.0/AppUtilityLinux.dll
+/home/riese/Projects/QuartzLinux/AppUtilityLinux/bin/Debug/netstandard2.0/AppUtilityLinux.pdb
+/home/riese/Projects/QuartzLinux/AppUtilityLinux/obj/Debug/netstandard2.0/AppUtilityLinux.dll
+/home/riese/Projects/QuartzLinux/AppUtilityLinux/obj/Debug/netstandard2.0/AppUtilityLinux.pdb

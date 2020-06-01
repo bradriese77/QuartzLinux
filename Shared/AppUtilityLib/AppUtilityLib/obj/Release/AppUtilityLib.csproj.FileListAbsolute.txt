@@ -1,0 +1,16 @@
+C:\Users\briese\Source\Workspaces\Shared\AppUtilityLib\AppUtilityLib\bin\Release\AppUtilityLib.dll
+C:\Users\briese\Source\Workspaces\Shared\AppUtilityLib\AppUtilityLib\bin\Release\AppUtilityLib.pdb
+C:\Users\briese\Source\Workspaces\Shared\AppUtilityLib\AppUtilityLib\bin\Release\DocumentFormat.OpenXml.dll
+C:\Users\briese\Source\Workspaces\Shared\AppUtilityLib\AppUtilityLib\bin\Release\log4net.dll
+C:\Users\briese\Source\Workspaces\Shared\AppUtilityLib\AppUtilityLib\bin\Release\Newtonsoft.Json.dll
+C:\Users\briese\Source\Workspaces\Shared\AppUtilityLib\AppUtilityLib\bin\Release\OpenXml.Excel.Data.dll
+C:\Users\briese\Source\Workspaces\Shared\AppUtilityLib\AppUtilityLib\bin\Release\System.IO.FileSystem.Primitives.dll
+C:\Users\briese\Source\Workspaces\Shared\AppUtilityLib\AppUtilityLib\bin\Release\System.IO.Packaging.dll
+C:\Users\briese\Source\Workspaces\Shared\AppUtilityLib\AppUtilityLib\bin\Release\OpenXml.Excel.Data.pdb
+C:\Users\briese\Source\Workspaces\Shared\AppUtilityLib\AppUtilityLib\bin\Release\DocumentFormat.OpenXml.xml
+C:\Users\briese\Source\Workspaces\Shared\AppUtilityLib\AppUtilityLib\bin\Release\log4net.xml
+C:\Users\briese\Source\Workspaces\Shared\AppUtilityLib\AppUtilityLib\bin\Release\Newtonsoft.Json.xml
+C:\Users\briese\Source\Workspaces\Shared\AppUtilityLib\AppUtilityLib\obj\Release\AppUtilityLib.csprojAssemblyReference.cache
+C:\Users\briese\Source\Workspaces\Shared\AppUtilityLib\AppUtilityLib\obj\Release\AppUtilityLib.csproj.CopyComplete
+C:\Users\briese\Source\Workspaces\Shared\AppUtilityLib\AppUtilityLib\obj\Release\AppUtilityLib.dll
+C:\Users\briese\Source\Workspaces\Shared\AppUtilityLib\AppUtilityLib\obj\Release\AppUtilityLib.pdb

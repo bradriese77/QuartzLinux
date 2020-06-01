@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuartzSchedulerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="QRTZ_JOB_HISTORY">
+    <Key>
+      <PropertyRef Name="JOB_HISTORY_ID" />
+    </Key>
+    <Property Name="JOB_HISTORY_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SCHED_NAME" Type="nvarchar" MaxLength="120" Nullable="false" />
+    <Property Name="JOB_NAME" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="JOB_GROUP" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="DETAIL" Type="nvarchar(max)" />
+    <Property Name="STARTDATE" Type="datetime2" Precision="7" />
+    <Property Name="ENDDATE" Type="datetime2" Precision="7" />
+    <Property Name="RECORDDATE" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="ISEXCEPTION" Type="bit" />
+    <Property Name="LOGFILE" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityContainer Name="QuartzSchedulerModelStoreContainer">
+    <EntitySet Name="QRTZ_JOB_HISTORY" EntityType="Self.QRTZ_JOB_HISTORY" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

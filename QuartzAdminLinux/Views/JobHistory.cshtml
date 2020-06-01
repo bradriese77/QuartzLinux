@@ -1,0 +1,103 @@
+﻿@model IEnumerable<QRTZ_JOB_HISTORY>
+@{
+    ViewBag.Title = "Index";
+
+}
+<script src="~/Scripts/date.format.js"></script>
+
+
+
+<script>
+
+    
+    function parseJsonDate(jsonDateString) {
+        return new Date(parseInt(jsonDateString.replace('/Date(', '')));
+    }
+    $(document).ready(function () {
+
+
+
+        var url = base_url + '/Home/GetJobHistory';
+
+
+        //alert(url);
+        $('#jobhistory').DataTable({
+            serverSide: true,
+            processing: true,
+
+            "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+            columns: [
+                {
+                    name: "JOB_HISTORY_ID", data: "JOB_HISTORY_ID", "orderable": true,
+
+                },
+                {
+
+                    name: "JOB_NAME", data: "JOB_NAME", "orderable": true,
+                },
+                {
+
+                    name: "LOGFILE", data: "LOGFILE", "orderable": true, "render": function (data, type, row, meta) {
+                   //      return '<a href="file://' + data.replace("C:\\", "\\\\" + location.hostname + "\\c$\\") + '">' + data.replace("C:\\", "\\\\" + location.hostname + "\\c$\\") + '</a>';
+
+                        return '<a href="' + base_url + 'Home/LogViewer?LogFilePath=' + encodeURI(data) + '">' + data + '</a>';
+                    }
+                },
+                {
+
+                    name: "ISEXCEPTION", data: "ISEXCEPTION", "orderable": true,
+                },
+                {
+
+                    name: "STATUSDETAIL", data: "STATUSDETAIL", "orderable": true,
+                },
+                {
+
+                    name: "STARTDATE", data: "STARTDATE", "orderable": true, "render": function (data, type, row, meta) {
+                        return parseJsonDate(data).toISOString().slice(0, 10) + ' ' + parseJsonDate(data).toLocaleTimeString()
+                    }
+                },
+                {
+
+                    name: "ENDDATE", data: "ENDDATE", "orderable": true, "render": function (data, type, row, meta) {
+                        return parseJsonDate(data).toISOString().slice(0, 10) + ' ' + parseJsonDate(data).toLocaleTimeString()
+                    }
+                },
+                {
+
+                    name: "JOB_DATA", data: "JOB_DATA_JSON", "orderable": true,
+                },
+
+            ],
+            ajax: {
+                url: url, dataSrc: function (json) {
+                    if (!json.success) {
+                        //    toastr["warning"](json.message);
+                        alert(json.message);
+                    }
+
+                    return json.data;
+                },
+            }
+        });
+
+    });
+</script>
+
+<table id="jobhistory" class="display table table-striped table-bordered table-condensed" width="100%">
+    <thead>
+        <tr>
+
+            <th>JOB_HISTORY_ID</th>
+            <th>JOB_NAME</th>
+            <th>LOGFILE</th>
+            <th>ISEXCEPTION</th>
+            <th>STATUSDETAIL</th>
+            <th>STARTDATE</th>
+            <th>ENDDATE</th>
+            <th>JOB_DATA</th>
+        </tr>
+
+    </thead>
+
+</table>
