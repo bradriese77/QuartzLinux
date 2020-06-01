@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Quartz" Version="3.0.7" />
+    <PackageReference Include="Quartzmin.SelfHost" Version="1.0.3" />
+    <PackageReference Include="Quartz.Serialization.Json" Version="3.0.7" />
+    <PackageReference Include="log4net" Version="2.0.8" />
+    <PackageReference Include="Quartz.Plugins.RecentHistory" Version="1.0.3" />
+    <PackageReference Include="CrystalQuartz.AspNetCore" Version="6.8.1" />
+    <PackageReference Include="MySql.Data" Version="8.0.18" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\QuartzLinuxLib\QuartzLinuxLib.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="app.config" />
+    <Content Remove="QuartzLinux.dll.config" />
+    <Content Remove="QuartzServiceLib.dll.config" />
+  </ItemGroup>
+</Project>
