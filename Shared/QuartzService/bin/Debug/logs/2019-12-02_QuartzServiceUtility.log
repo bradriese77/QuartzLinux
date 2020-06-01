@@ -1,0 +1,57 @@
+2019-12-02 07:20:09,013 version:(null) [1] INFO QuartzServiceLib.QuartzWrapper - Starting Quartz Scheduler
+2019-12-02 07:20:10,009 version:(null) [1] WARN Quartz.Simpl.TaskSchedulingThreadPool - Thread priority is no longer supported for thread pool, ignoring
+2019-12-02 07:20:10,089 version:(null) [1] INFO Quartz.Util.DBConnectionManager - Registering datasource 'default' with db provider: 'Quartz.Impl.AdoJobStore.Common.DbProvider'
+2019-12-02 07:20:10,127 version:(null) [1] INFO Quartz.Impl.StdSchedulerFactory - Using object serializer: Quartz.Simpl.BinaryObjectSerializer, Quartz
+2019-12-02 07:20:10,240 version:(null) [1] INFO Quartz.Core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-12-02 07:20:10,270 version:(null) [1] INFO Quartz.Core.QuartzScheduler - Quartz Scheduler v.3.0.7.0 created.
+2019-12-02 07:20:10,284 version:(null) [1] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2019-12-02 07:20:10,288 version:(null) [1] INFO Quartz.Impl.AdoJobStore.JobStoreTX - JobStoreTX initialized.
+2019-12-02 07:20:10,439 version:(null) [1] INFO Quartz.Simpl.RemotingSchedulerExporter - Remoting is allowing remote calls
+2019-12-02 07:20:10,448 version:(null) [1] INFO Quartz.Simpl.RemotingSchedulerExporter - Registering remoting channel of type 'System.Runtime.Remoting.Channels.Tcp.TcpChannel' to port (555) with name (httpQuartz)
+2019-12-02 07:20:10,452 version:(null) [1] INFO Quartz.Simpl.RemotingSchedulerExporter - Remoting channel registered successfully
+2019-12-02 07:20:10,454 version:(null) [1] INFO Quartz.Simpl.RemotingSchedulerExporter - Successfully marshalled remotable scheduler under name 'QuartzScheduler'
+2019-12-02 07:20:10,459 version:(null) [1] INFO Quartz.Core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'DEV-BR-9WYLM32-QuartzService' with instanceId 'DEV-BR-9WYLM32-QuartzService'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - access via remote invocation.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 5 threads.
+  Using job-store 'Quartz.Impl.AdoJobStore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2019-12-02 07:20:10,463 version:(null) [1] INFO Quartz.Impl.StdSchedulerFactory - Quartz scheduler 'DEV-BR-9WYLM32-QuartzService' initialized
+2019-12-02 07:20:10,464 version:(null) [1] INFO Quartz.Impl.StdSchedulerFactory - Quartz scheduler version: 3.0.7.0
+2019-12-02 07:20:10,946 version:(null) [9] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2019-12-02 07:20:11,013 version:(null) [9] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2019-12-02 07:20:11,015 version:(null) [9] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Recovery complete.
+2019-12-02 07:20:11,147 version:(null) [9] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Removed 1 'complete' triggers.
+2019-12-02 07:20:11,193 version:(null) [10] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Removed 1 stale fired job entries.
+2019-12-02 07:20:12,423 version:(null) [10] INFO Quartz.Core.QuartzScheduler - Scheduler DEV-BR-9WYLM32-QuartzService_$_DEV-BR-9WYLM32-QuartzService started.
+2019-12-02 07:45:22,703 version:(null) [65] INFO QuartzService.Program - Calling PayrollReportingServiceUtility.TimeClockActivityFileExporterJob
+2019-12-02 08:11:02,436 version:(null) [1] INFO QuartzServiceLib.QuartzWrapper - Starting Quartz Scheduler
+2019-12-02 08:11:02,563 version:(null) [1] WARN Quartz.Simpl.TaskSchedulingThreadPool - Thread priority is no longer supported for thread pool, ignoring
+2019-12-02 08:11:02,591 version:(null) [1] INFO Quartz.Util.DBConnectionManager - Registering datasource 'default' with db provider: 'Quartz.Impl.AdoJobStore.Common.DbProvider'
+2019-12-02 08:11:02,597 version:(null) [1] INFO Quartz.Impl.StdSchedulerFactory - Using object serializer: Quartz.Simpl.BinaryObjectSerializer, Quartz
+2019-12-02 08:11:02,632 version:(null) [1] INFO Quartz.Core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-12-02 08:11:02,637 version:(null) [1] INFO Quartz.Core.QuartzScheduler - Quartz Scheduler v.3.0.7.0 created.
+2019-12-02 08:11:02,648 version:(null) [1] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2019-12-02 08:11:02,651 version:(null) [1] INFO Quartz.Impl.AdoJobStore.JobStoreTX - JobStoreTX initialized.
+2019-12-02 08:11:02,668 version:(null) [1] INFO Quartz.Simpl.RemotingSchedulerExporter - Remoting is allowing remote calls
+2019-12-02 08:11:02,670 version:(null) [1] INFO Quartz.Simpl.RemotingSchedulerExporter - Registering remoting channel of type 'System.Runtime.Remoting.Channels.Tcp.TcpChannel' to port (555) with name (httpQuartz)
+2019-12-02 08:11:02,671 version:(null) [1] INFO Quartz.Simpl.RemotingSchedulerExporter - Remoting channel registered successfully
+2019-12-02 08:11:02,672 version:(null) [1] INFO Quartz.Simpl.RemotingSchedulerExporter - Successfully marshalled remotable scheduler under name 'QuartzScheduler'
+2019-12-02 08:11:02,675 version:(null) [1] INFO Quartz.Core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'DEV-BR-9WYLM32-QuartzService' with instanceId 'DEV-BR-9WYLM32-QuartzService'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - access via remote invocation.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 5 threads.
+  Using job-store 'Quartz.Impl.AdoJobStore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2019-12-02 08:11:02,678 version:(null) [1] INFO Quartz.Impl.StdSchedulerFactory - Quartz scheduler 'DEV-BR-9WYLM32-QuartzService' initialized
+2019-12-02 08:11:02,680 version:(null) [1] INFO Quartz.Impl.StdSchedulerFactory - Quartz scheduler version: 3.0.7.0
+2019-12-02 08:11:02,772 version:(null) [8] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2019-12-02 08:11:02,789 version:(null) [8] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2019-12-02 08:11:02,791 version:(null) [8] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Recovery complete.
+2019-12-02 08:11:02,822 version:(null) [9] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Removed 1 'complete' triggers.
+2019-12-02 08:11:02,828 version:(null) [5] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Removed 1 stale fired job entries.
+2019-12-02 08:11:03,157 version:(null) [5] INFO Quartz.Core.QuartzScheduler - Scheduler DEV-BR-9WYLM32-QuartzService_$_DEV-BR-9WYLM32-QuartzService started.

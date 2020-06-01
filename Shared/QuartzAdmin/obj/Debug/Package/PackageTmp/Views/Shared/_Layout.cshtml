@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    @using QuartzAdmin.Helpers;
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    @Scripts.Render("~/bundles/datatables")
+
+    <script src="~/Scripts/toastr.js"></script>
+
+    <script>
+               var base_url = "@Request.Url.GetLeftPart(UriPartial.Authority)@Url.Content("~/")";
+    </script>
+    <link href="~/Content/toastr.css" rel="stylesheet" />
+
+
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" >
+        <ul class="nav nav-tabs">
+            <li style="padding-top:10px" class="nav-item @Html.IsActive("Index","Home")">@Html.ActionLink("CrystalQuartz", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+            <li style="padding-top:10px" class="nav-item @Html.IsActive("QuartzMin","Home")">@Html.ActionLink("QuartzMin", "QuartzMin", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+            <li style="padding-top:10px" class="nav-item @Html.IsActive("JobHistory","Home")">@Html.ActionLink("JobHistory", "JobHistory", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+            <li style="padding-top:10px" class="nav-item @Html.IsActive("LogViewer","Home")">@Html.ActionLink("LogViewer", "LogViewer", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+            <li style="padding-top:10px;width:100px;text-align:center" class="nav-item @Html.IsActive("Exit","Home")">@Html.ActionLink("Exit", "Exit", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+        </ul>
+    </div>
+
+    <div style="padding-left: 20px;padding-top:10px">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Quartz Admin</p>
+        </footer>
+    </div>
+
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

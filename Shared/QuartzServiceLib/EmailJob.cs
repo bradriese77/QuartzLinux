@@ -83,7 +83,7 @@ namespace QuartzServiceLib
             }
 
             if (Tos.Length > 0 && !string.IsNullOrEmpty(Body))
-             /   SendEmail(Tos, Subject, Message, FilePaths,From);
+                SendEmail(Tos, Subject, Message, FilePaths,From);
         }
 
         public override void ExecuteJob(IJobExecutionContext context)

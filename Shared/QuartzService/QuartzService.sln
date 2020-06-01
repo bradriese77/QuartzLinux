@@ -1,0 +1,213 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29418.71
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuartzService", "QuartzService.csproj", "{E03359BA-917B-4722-A49B-C8E854AB4A54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuartzServiceLib", "..\QuartzServiceLib\QuartzServiceLib.csproj", "{2D38F6A4-D378-4904-852A-70CE23D3D5F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppUtilityLib", "..\AppUtilityLib\AppUtilityLib\AppUtilityLib.csproj", "{EE7FB327-2CB1-49B1-9CF0-410085628689}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenXml.Excel.Data", "..\OpenXml.Excel.Data\OpenXml.Excel.Data.csproj", "{6396AE5D-CEFB-4E2F-9435-BCCD6141A983}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuartzAdmin", "..\QuartzAdmin\QuartzAdmin.csproj", "{A42069EF-CDBB-4BC7-963C-EF804A3072E6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Jobs", "Jobs", "{229BC1A4-AD30-4D2F-9108-03441B37F6F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MissingCashUtility", "..\..\Reporting\ReportingUtilities\MissingCashUtility\MissingCashUtility.csproj", "{0BB22F08-F371-4F84-974C-B9E32AC9D21E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayrollReportingServiceUtility", "..\..\PayrollUtilities\PayrollReportingUtility\PayrollReportingUtility\PayrollReportingServiceUtility.csproj", "{4C5CB780-3B91-4830-A6A3-39D74C9942B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinybeansStatusUpdates", "..\..\TinybeansStatusUpdates\TinybeansStatusUpdates\TinybeansStatusUpdates.csproj", "{FB0D67D9-392F-4588-835B-2D77EC62BAA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UltiProChromeUtilityLib", "..\UltiProChromeUtilityLib\UltiProChromeUtilityLib.csproj", "{E5C822A9-20A1-4E99-94D2-53E4F7251C2A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E03359BA-917B-4722-A49B-C8E854AB4A54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E03359BA-917B-4722-A49B-C8E854AB4A54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E03359BA-917B-4722-A49B-C8E854AB4A54}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E03359BA-917B-4722-A49B-C8E854AB4A54}.Debug|x64.Build.0 = Debug|Any CPU
+		{E03359BA-917B-4722-A49B-C8E854AB4A54}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E03359BA-917B-4722-A49B-C8E854AB4A54}.Debug|x86.Build.0 = Debug|Any CPU
+		{E03359BA-917B-4722-A49B-C8E854AB4A54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E03359BA-917B-4722-A49B-C8E854AB4A54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E03359BA-917B-4722-A49B-C8E854AB4A54}.Release|x64.ActiveCfg = Release|Any CPU
+		{E03359BA-917B-4722-A49B-C8E854AB4A54}.Release|x64.Build.0 = Release|Any CPU
+		{E03359BA-917B-4722-A49B-C8E854AB4A54}.Release|x86.ActiveCfg = Release|Any CPU
+		{E03359BA-917B-4722-A49B-C8E854AB4A54}.Release|x86.Build.0 = Release|Any CPU
+		{2D38F6A4-D378-4904-852A-70CE23D3D5F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D38F6A4-D378-4904-852A-70CE23D3D5F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D38F6A4-D378-4904-852A-70CE23D3D5F0}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2D38F6A4-D378-4904-852A-70CE23D3D5F0}.Debug|x64.Build.0 = Debug|Any CPU
+		{2D38F6A4-D378-4904-852A-70CE23D3D5F0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2D38F6A4-D378-4904-852A-70CE23D3D5F0}.Debug|x86.Build.0 = Debug|Any CPU
+		{2D38F6A4-D378-4904-852A-70CE23D3D5F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D38F6A4-D378-4904-852A-70CE23D3D5F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D38F6A4-D378-4904-852A-70CE23D3D5F0}.Release|x64.ActiveCfg = Release|Any CPU
+		{2D38F6A4-D378-4904-852A-70CE23D3D5F0}.Release|x64.Build.0 = Release|Any CPU
+		{2D38F6A4-D378-4904-852A-70CE23D3D5F0}.Release|x86.ActiveCfg = Release|Any CPU
+		{2D38F6A4-D378-4904-852A-70CE23D3D5F0}.Release|x86.Build.0 = Release|Any CPU
+		{EE7FB327-2CB1-49B1-9CF0-410085628689}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE7FB327-2CB1-49B1-9CF0-410085628689}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE7FB327-2CB1-49B1-9CF0-410085628689}.Debug|x64.ActiveCfg = Debug|x64
+		{EE7FB327-2CB1-49B1-9CF0-410085628689}.Debug|x64.Build.0 = Debug|x64
+		{EE7FB327-2CB1-49B1-9CF0-410085628689}.Debug|x86.ActiveCfg = Debug|x86
+		{EE7FB327-2CB1-49B1-9CF0-410085628689}.Debug|x86.Build.0 = Debug|x86
+		{EE7FB327-2CB1-49B1-9CF0-410085628689}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE7FB327-2CB1-49B1-9CF0-410085628689}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE7FB327-2CB1-49B1-9CF0-410085628689}.Release|x64.ActiveCfg = Release|x64
+		{EE7FB327-2CB1-49B1-9CF0-410085628689}.Release|x64.Build.0 = Release|x64
+		{EE7FB327-2CB1-49B1-9CF0-410085628689}.Release|x86.ActiveCfg = Release|x86
+		{EE7FB327-2CB1-49B1-9CF0-410085628689}.Release|x86.Build.0 = Release|x86
+		{6396AE5D-CEFB-4E2F-9435-BCCD6141A983}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6396AE5D-CEFB-4E2F-9435-BCCD6141A983}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6396AE5D-CEFB-4E2F-9435-BCCD6141A983}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6396AE5D-CEFB-4E2F-9435-BCCD6141A983}.Debug|x64.Build.0 = Debug|Any CPU
+		{6396AE5D-CEFB-4E2F-9435-BCCD6141A983}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6396AE5D-CEFB-4E2F-9435-BCCD6141A983}.Debug|x86.Build.0 = Debug|Any CPU
+		{6396AE5D-CEFB-4E2F-9435-BCCD6141A983}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6396AE5D-CEFB-4E2F-9435-BCCD6141A983}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6396AE5D-CEFB-4E2F-9435-BCCD6141A983}.Release|x64.ActiveCfg = Release|Any CPU
+		{6396AE5D-CEFB-4E2F-9435-BCCD6141A983}.Release|x64.Build.0 = Release|Any CPU
+		{6396AE5D-CEFB-4E2F-9435-BCCD6141A983}.Release|x86.ActiveCfg = Release|Any CPU
+		{6396AE5D-CEFB-4E2F-9435-BCCD6141A983}.Release|x86.Build.0 = Release|Any CPU
+		{A42069EF-CDBB-4BC7-963C-EF804A3072E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A42069EF-CDBB-4BC7-963C-EF804A3072E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A42069EF-CDBB-4BC7-963C-EF804A3072E6}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A42069EF-CDBB-4BC7-963C-EF804A3072E6}.Debug|x64.Build.0 = Debug|Any CPU
+		{A42069EF-CDBB-4BC7-963C-EF804A3072E6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A42069EF-CDBB-4BC7-963C-EF804A3072E6}.Debug|x86.Build.0 = Debug|Any CPU
+		{A42069EF-CDBB-4BC7-963C-EF804A3072E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A42069EF-CDBB-4BC7-963C-EF804A3072E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A42069EF-CDBB-4BC7-963C-EF804A3072E6}.Release|x64.ActiveCfg = Release|Any CPU
+		{A42069EF-CDBB-4BC7-963C-EF804A3072E6}.Release|x64.Build.0 = Release|Any CPU
+		{A42069EF-CDBB-4BC7-963C-EF804A3072E6}.Release|x86.ActiveCfg = Release|Any CPU
+		{A42069EF-CDBB-4BC7-963C-EF804A3072E6}.Release|x86.Build.0 = Release|Any CPU
+		{0BB22F08-F371-4F84-974C-B9E32AC9D21E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BB22F08-F371-4F84-974C-B9E32AC9D21E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BB22F08-F371-4F84-974C-B9E32AC9D21E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0BB22F08-F371-4F84-974C-B9E32AC9D21E}.Debug|x64.Build.0 = Debug|Any CPU
+		{0BB22F08-F371-4F84-974C-B9E32AC9D21E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0BB22F08-F371-4F84-974C-B9E32AC9D21E}.Debug|x86.Build.0 = Debug|Any CPU
+		{0BB22F08-F371-4F84-974C-B9E32AC9D21E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BB22F08-F371-4F84-974C-B9E32AC9D21E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BB22F08-F371-4F84-974C-B9E32AC9D21E}.Release|x64.ActiveCfg = Release|Any CPU
+		{0BB22F08-F371-4F84-974C-B9E32AC9D21E}.Release|x64.Build.0 = Release|Any CPU
+		{0BB22F08-F371-4F84-974C-B9E32AC9D21E}.Release|x86.ActiveCfg = Release|Any CPU
+		{0BB22F08-F371-4F84-974C-B9E32AC9D21E}.Release|x86.Build.0 = Release|Any CPU
+		{4C5CB780-3B91-4830-A6A3-39D74C9942B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C5CB780-3B91-4830-A6A3-39D74C9942B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C5CB780-3B91-4830-A6A3-39D74C9942B7}.Debug|x64.ActiveCfg = Debug|x64
+		{4C5CB780-3B91-4830-A6A3-39D74C9942B7}.Debug|x64.Build.0 = Debug|x64
+		{4C5CB780-3B91-4830-A6A3-39D74C9942B7}.Debug|x86.ActiveCfg = Debug|x86
+		{4C5CB780-3B91-4830-A6A3-39D74C9942B7}.Debug|x86.Build.0 = Debug|x86
+		{4C5CB780-3B91-4830-A6A3-39D74C9942B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C5CB780-3B91-4830-A6A3-39D74C9942B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C5CB780-3B91-4830-A6A3-39D74C9942B7}.Release|x64.ActiveCfg = Release|x64
+		{4C5CB780-3B91-4830-A6A3-39D74C9942B7}.Release|x64.Build.0 = Release|x64
+		{4C5CB780-3B91-4830-A6A3-39D74C9942B7}.Release|x86.ActiveCfg = Release|x86
+		{4C5CB780-3B91-4830-A6A3-39D74C9942B7}.Release|x86.Build.0 = Release|x86
+		{FB0D67D9-392F-4588-835B-2D77EC62BAA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB0D67D9-392F-4588-835B-2D77EC62BAA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB0D67D9-392F-4588-835B-2D77EC62BAA1}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FB0D67D9-392F-4588-835B-2D77EC62BAA1}.Debug|x64.Build.0 = Debug|Any CPU
+		{FB0D67D9-392F-4588-835B-2D77EC62BAA1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FB0D67D9-392F-4588-835B-2D77EC62BAA1}.Debug|x86.Build.0 = Debug|Any CPU
+		{FB0D67D9-392F-4588-835B-2D77EC62BAA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB0D67D9-392F-4588-835B-2D77EC62BAA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB0D67D9-392F-4588-835B-2D77EC62BAA1}.Release|x64.ActiveCfg = Release|Any CPU
+		{FB0D67D9-392F-4588-835B-2D77EC62BAA1}.Release|x64.Build.0 = Release|Any CPU
+		{FB0D67D9-392F-4588-835B-2D77EC62BAA1}.Release|x86.ActiveCfg = Release|Any CPU
+		{FB0D67D9-392F-4588-835B-2D77EC62BAA1}.Release|x86.Build.0 = Release|Any CPU
+		{E5C822A9-20A1-4E99-94D2-53E4F7251C2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5C822A9-20A1-4E99-94D2-53E4F7251C2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5C822A9-20A1-4E99-94D2-53E4F7251C2A}.Debug|x64.ActiveCfg = Debug|x64
+		{E5C822A9-20A1-4E99-94D2-53E4F7251C2A}.Debug|x64.Build.0 = Debug|x64
+		{E5C822A9-20A1-4E99-94D2-53E4F7251C2A}.Debug|x86.ActiveCfg = Debug|x86
+		{E5C822A9-20A1-4E99-94D2-53E4F7251C2A}.Debug|x86.Build.0 = Debug|x86
+		{E5C822A9-20A1-4E99-94D2-53E4F7251C2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5C822A9-20A1-4E99-94D2-53E4F7251C2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5C822A9-20A1-4E99-94D2-53E4F7251C2A}.Release|x64.ActiveCfg = Release|x64
+		{E5C822A9-20A1-4E99-94D2-53E4F7251C2A}.Release|x64.Build.0 = Release|x64
+		{E5C822A9-20A1-4E99-94D2-53E4F7251C2A}.Release|x86.ActiveCfg = Release|x86
+		{E5C822A9-20A1-4E99-94D2-53E4F7251C2A}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0BB22F08-F371-4F84-974C-B9E32AC9D21E} = {229BC1A4-AD30-4D2F-9108-03441B37F6F5}
+		{4C5CB780-3B91-4830-A6A3-39D74C9942B7} = {229BC1A4-AD30-4D2F-9108-03441B37F6F5}
+		{FB0D67D9-392F-4588-835B-2D77EC62BAA1} = {229BC1A4-AD30-4D2F-9108-03441B37F6F5}
+		{E5C822A9-20A1-4E99-94D2-53E4F7251C2A} = {229BC1A4-AD30-4D2F-9108-03441B37F6F5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B795B593-E203-45BF-AB80-F8AB13AD94E3}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 10
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://sctsttfs00:8080/tfs/mainline
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = QuartzService.csproj
+		SccLocalPath1 = .
+		SccProjectUniqueName2 = ..\\QuartzServiceLib\\QuartzServiceLib.csproj
+		SccProjectName2 = ../QuartzServiceLib
+		SccLocalPath2 = ..\\QuartzServiceLib
+		SccProjectUniqueName3 = ..\\AppUtilityLib\\AppUtilityLib\\AppUtilityLib.csproj
+		SccProjectName3 = ../AppUtilityLib/AppUtilityLib
+		SccLocalPath3 = ..\\AppUtilityLib\\AppUtilityLib
+		SccProjectUniqueName4 = ..\\OpenXml.Excel.Data\\OpenXml.Excel.Data.csproj
+		SccProjectName4 = ../OpenXml.Excel.Data
+		SccLocalPath4 = ..\\OpenXml.Excel.Data
+		SccProjectUniqueName5 = ..\\QuartzAdmin\\QuartzAdmin.csproj
+		SccProjectName5 = ../QuartzAdmin
+		SccLocalPath5 = ..\\QuartzAdmin
+		SccProjectUniqueName6 = ..\\..\\Reporting\\ReportingUtilities\\MissingCashUtility\\MissingCashUtility.csproj
+		SccProjectTopLevelParentUniqueName6 = QuartzService.sln
+		SccProjectName6 = ../../Reporting/ReportingUtilities/MissingCashUtility
+		SccLocalPath6 = ..\\..\\Reporting\\ReportingUtilities\\MissingCashUtility
+		SccProjectUniqueName7 = ..\\..\\PayrollUtilities\\PayrollReportingUtility\\PayrollReportingUtility\\PayrollReportingServiceUtility.csproj
+		SccProjectTopLevelParentUniqueName7 = QuartzService.sln
+		SccProjectName7 = ../../PayrollUtilities/PayrollReportingUtility/PayrollReportingUtility
+		SccLocalPath7 = ..\\..\\PayrollUtilities\\PayrollReportingUtility\\PayrollReportingUtility
+		SccProjectUniqueName8 = ..\\..\\TinybeansStatusUpdates\\TinybeansStatusUpdates\\TinybeansStatusUpdates.csproj
+		SccProjectTopLevelParentUniqueName8 = QuartzService.sln
+		SccProjectName8 = ../../TinybeansStatusUpdates/TinybeansStatusUpdates
+		SccLocalPath8 = ..\\..\\TinybeansStatusUpdates\\TinybeansStatusUpdates
+		SccProjectUniqueName9 = ..\\UltiProChromeUtilityLib\\UltiProChromeUtilityLib.csproj
+		SccProjectTopLevelParentUniqueName9 = QuartzService.sln
+		SccProjectName9 = ../UltiProChromeUtilityLib
+		SccLocalPath9 = ..\\UltiProChromeUtilityLib
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://sctsttfs00:8080/tfs/mainline
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ..\\QuartzServiceLib\\QuartzServiceLib.csproj
+		SccProjectName1 = ../QuartzServiceLib
+		SccLocalPath1 = ..\\QuartzServiceLib
+		SccProjectUniqueName2 = ..\\AppUtilityLib\\AppUtilityLib\\AppUtilityLib.csproj
+		SccProjectName2 = ../AppUtilityLib/AppUtilityLib
+		SccLocalPath2 = ..\\AppUtilityLib\\AppUtilityLib
+		SccProjectUniqueName3 = ..\\OpenXml.Excel.Data\\OpenXml.Excel.Data.csproj
+		SccProjectName3 = ../OpenXml.Excel.Data
+		SccLocalPath3 = ..\\OpenXml.Excel.Data
+		SccProjectUniqueName4 = QuartzService.csproj
+		SccLocalPath4 = .
+		SccProjectUniqueName5 = ..\\QuartzAdmin\\QuartzAdmin.csproj
+		SccProjectName5 = ../QuartzAdmin
+		SccLocalPath5 = ..\\QuartzAdmin
+	EndGlobalSection
+EndGlobal

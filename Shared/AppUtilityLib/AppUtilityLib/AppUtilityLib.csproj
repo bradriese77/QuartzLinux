@@ -113,13 +113,13 @@
     <Compile Include="UtilityExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="C:\Users\brad\source\repos\Shared\OpenXml.Excel.Data\OpenXml.Excel.Data.csproj">
+    <ProjectReference Include="..\..\OpenXml.Excel.Data\OpenXml.Excel.Data.csproj">
       <Project>{6396ae5d-cefb-4e2f-9435-bccd6141a983}</Project>
       <Name>OpenXml.Excel.Data</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

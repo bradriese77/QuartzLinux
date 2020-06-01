@@ -20,3 +20,5 @@ C:\Users\briese\Source\Workspaces\Shared\QuartzServiceLib\bin\Release\System.Ser
 C:\Users\briese\Source\Workspaces\Shared\QuartzServiceLib\bin\Release\System.Diagnostics.EventLog.xml
 C:\Users\briese\Source\Workspaces\Shared\QuartzServiceLib\bin\Release\System.Security.Principal.Windows.xml
 C:\Users\briese\Source\Workspaces\Shared\QuartzServiceLib\bin\Release\System.ServiceProcess.ServiceController.xml
+C:\Users\briese\Source\Workspaces\Shared\QuartzServiceLib\bin\Release\Newtonsoft.Json.dll
+C:\Users\briese\Source\Workspaces\Shared\QuartzServiceLib\bin\Release\Newtonsoft.Json.xml

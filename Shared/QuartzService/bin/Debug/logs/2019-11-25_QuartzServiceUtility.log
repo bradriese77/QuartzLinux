@@ -1,0 +1,148 @@
+2019-11-25 12:44:21,752 version:(null) [1] INFO QuartzServiceLib.QuartzWrapper - Starting Quartz Scheduler
+2019-11-25 12:44:21,948 version:(null) [1] WARN Quartz.Simpl.TaskSchedulingThreadPool - Thread priority is no longer supported for thread pool, ignoring
+2019-11-25 12:44:21,993 version:(null) [1] INFO Quartz.Util.DBConnectionManager - Registering datasource 'default' with db provider: 'Quartz.Impl.AdoJobStore.Common.DbProvider'
+2019-11-25 12:44:22,000 version:(null) [1] INFO Quartz.Impl.StdSchedulerFactory - Using object serializer: Quartz.Simpl.BinaryObjectSerializer, Quartz
+2019-11-25 12:44:22,044 version:(null) [1] INFO Quartz.Core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-11-25 12:44:22,051 version:(null) [1] INFO Quartz.Core.QuartzScheduler - Quartz Scheduler v.3.0.7.0 created.
+2019-11-25 12:44:22,065 version:(null) [1] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2019-11-25 12:44:22,070 version:(null) [1] INFO Quartz.Impl.AdoJobStore.JobStoreTX - JobStoreTX initialized.
+2019-11-25 12:44:22,116 version:(null) [1] INFO Quartz.Simpl.RemotingSchedulerExporter - Remoting is allowing remote calls
+2019-11-25 12:44:22,118 version:(null) [1] INFO Quartz.Simpl.RemotingSchedulerExporter - Registering remoting channel of type 'System.Runtime.Remoting.Channels.Tcp.TcpChannel' to port (555) with name (httpQuartz)
+2019-11-25 12:44:22,120 version:(null) [1] INFO Quartz.Simpl.RemotingSchedulerExporter - Remoting channel registered successfully
+2019-11-25 12:44:22,122 version:(null) [1] INFO Quartz.Simpl.RemotingSchedulerExporter - Successfully marshalled remotable scheduler under name 'QuartzScheduler'
+2019-11-25 12:44:22,129 version:(null) [1] INFO Quartz.Core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'DEV-BR-9WYLM32-QuartzService' with instanceId 'DEV-BR-9WYLM32-QuartzService-QuartzService'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - access via remote invocation.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 5 threads.
+  Using job-store 'Quartz.Impl.AdoJobStore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2019-11-25 12:44:22,149 version:(null) [1] INFO Quartz.Impl.StdSchedulerFactory - Quartz scheduler 'DEV-BR-9WYLM32-QuartzService' initialized
+2019-11-25 12:44:22,151 version:(null) [1] INFO Quartz.Impl.StdSchedulerFactory - Quartz scheduler version: 3.0.7.0
+2019-11-25 12:44:22,346 version:(null) [9] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2019-11-25 12:44:22,378 version:(null) [9] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2019-11-25 12:44:22,380 version:(null) [9] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Recovery complete.
+2019-11-25 12:44:22,388 version:(null) [9] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Removed 0 'complete' triggers.
+2019-11-25 12:44:22,395 version:(null) [5] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Removed 0 stale fired job entries.
+2019-11-25 12:44:22,877 version:(null) [5] INFO Quartz.Core.QuartzScheduler - Scheduler DEV-BR-9WYLM32-QuartzService_$_DEV-BR-9WYLM32-QuartzService-QuartzService started.
+2019-11-25 15:32:31,473 version:(null) [1] INFO QuartzServiceLib.QuartzWrapper - Starting Quartz Scheduler
+2019-11-25 15:32:31,590 version:(null) [1] WARN Quartz.Simpl.TaskSchedulingThreadPool - Thread priority is no longer supported for thread pool, ignoring
+2019-11-25 15:32:31,618 version:(null) [1] INFO Quartz.Util.DBConnectionManager - Registering datasource 'default' with db provider: 'Quartz.Impl.AdoJobStore.Common.DbProvider'
+2019-11-25 15:32:31,624 version:(null) [1] INFO Quartz.Impl.StdSchedulerFactory - Using object serializer: Quartz.Simpl.BinaryObjectSerializer, Quartz
+2019-11-25 15:32:31,673 version:(null) [1] INFO Quartz.Core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-11-25 15:32:31,677 version:(null) [1] INFO Quartz.Core.QuartzScheduler - Quartz Scheduler v.3.0.7.0 created.
+2019-11-25 15:32:31,685 version:(null) [1] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2019-11-25 15:32:31,689 version:(null) [1] INFO Quartz.Impl.AdoJobStore.JobStoreTX - JobStoreTX initialized.
+2019-11-25 15:32:31,707 version:(null) [1] INFO Quartz.Core.QuartzScheduler - Scheduler DEV-BR-9WYLM32-QuartzService_$_DEV-BR-9WYLM32-QuartzService-QuartzService shutting down.
+2019-11-25 15:32:31,710 version:(null) [1] INFO Quartz.Core.QuartzScheduler - Scheduler DEV-BR-9WYLM32-QuartzService_$_DEV-BR-9WYLM32-QuartzService-QuartzService paused.
+2019-11-25 15:32:31,718 version:(null) [1] ERROR Quartz.Impl.StdSchedulerFactory - Got another exception while shutting down after instantiation exception
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Quartzmin.SelfHost.QuartzminPlugin.Shutdown(CancellationToken cancellationToken)
+   at Quartz.Core.QuartzScheduler.<ShutdownPlugins>d__172.MoveNext() in C:\projects\quartznet\src\Quartz\Core\QuartzScheduler.cs:line 2216
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Quartz.Core.QuartzScheduler.<Shutdown>d__80.MoveNext() in C:\projects\quartznet\src\Quartz\Core\QuartzScheduler.cs:line 523
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Quartz.Impl.StdSchedulerFactory.<ShutdownFromInstantiateException>d__66.MoveNext() in C:\projects\quartznet\src\Quartz\Impl\StdSchedulerFactory.cs:line 1048
+2019-11-25 15:32:31,736 version:(null) [1] ERROR QuartzServiceLib.QuartzProgram`1 - Quartz.SchedulerException: Unable to bind scheduler to remoting. ---> System.Net.Sockets.SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at System.Net.Sockets.TcpListener.Start(Int32 backlog)
+   at System.Runtime.Remoting.Channels.ExclusiveTcpListener.Start(Boolean exclusiveAddressUse)
+   at System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.StartListening(Object data)
+   at System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.SetupChannel()
+   at System.Runtime.Remoting.Channels.Tcp.TcpServerChannel..ctor(IDictionary properties, IServerChannelSinkProvider sinkProvider, IAuthorizeRemotingConnection authorizeCallback)
+   at System.Runtime.Remoting.Channels.Tcp.TcpChannel..ctor(IDictionary properties, IClientChannelSinkProvider clientSinkProvider, IServerChannelSinkProvider serverSinkProvider)
+   at Quartz.Simpl.RemotingSchedulerExporter.RegisterRemotingChannelIfNeeded() in C:\projects\quartznet\src\Quartz\Simpl\RemotingSchedulerExporter.cs:line 132
+   at Quartz.Simpl.RemotingSchedulerExporter.Bind(IRemotableQuartzScheduler scheduler) in C:\projects\quartznet\src\Quartz\Simpl\RemotingSchedulerExporter.cs:line 78
+   at Quartz.Core.QuartzScheduler.Bind() in C:\projects\quartznet\src\Quartz\Core\QuartzScheduler.cs:line 318
+   at Quartz.Core.QuartzScheduler.Initialize() in C:\projects\quartznet\src\Quartz\Core\QuartzScheduler.cs:line 297
+   --- End of inner exception stack trace ---
+   at Quartz.Core.QuartzScheduler.Initialize() in C:\projects\quartznet\src\Quartz\Core\QuartzScheduler.cs:line 301
+   at Quartz.Impl.StdSchedulerFactory.<Instantiate>d__65.MoveNext() in C:\projects\quartznet\src\Quartz\Impl\StdSchedulerFactory.cs:line 1012
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Quartz.Impl.StdSchedulerFactory.<Instantiate>d__65.MoveNext() in C:\projects\quartznet\src\Quartz\Impl\StdSchedulerFactory.cs:line 1033
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Quartz.Impl.StdSchedulerFactory.<GetScheduler>d__69.MoveNext() in C:\projects\quartznet\src\Quartz\Impl\StdSchedulerFactory.cs:line 1114
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at QuartzServiceLib.QuartzWrapper.get_Scheduler() in C:\Users\briese\Source\Workspaces\Shared\QuartzServiceLib\QuartzWrapper.cs:line 24
+   at QuartzServiceLib.QuartzWrapper.StartQuartz() in C:\Users\briese\Source\Workspaces\Shared\QuartzServiceLib\QuartzWrapper.cs:line 47
+   at QuartzServiceLib.QuartzProgram`1.Start(String[] args) in C:\Users\briese\Source\Workspaces\Shared\QuartzServiceLib\QuartzProgram.cs:line 181 [See nested exception: System.Net.Sockets.SocketException (0x80004005): Only one usage of each socket address (protocol/network address/port) is normally permitted
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at System.Net.Sockets.TcpListener.Start(Int32 backlog)
+   at System.Runtime.Remoting.Channels.ExclusiveTcpListener.Start(Boolean exclusiveAddressUse)
+   at System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.StartListening(Object data)
+   at System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.SetupChannel()
+   at System.Runtime.Remoting.Channels.Tcp.TcpServerChannel..ctor(IDictionary properties, IServerChannelSinkProvider sinkProvider, IAuthorizeRemotingConnection authorizeCallback)
+   at System.Runtime.Remoting.Channels.Tcp.TcpChannel..ctor(IDictionary properties, IClientChannelSinkProvider clientSinkProvider, IServerChannelSinkProvider serverSinkProvider)
+   at Quartz.Simpl.RemotingSchedulerExporter.RegisterRemotingChannelIfNeeded() in C:\projects\quartznet\src\Quartz\Simpl\RemotingSchedulerExporter.cs:line 132
+   at Quartz.Simpl.RemotingSchedulerExporter.Bind(IRemotableQuartzScheduler scheduler) in C:\projects\quartznet\src\Quartz\Simpl\RemotingSchedulerExporter.cs:line 78
+   at Quartz.Core.QuartzScheduler.Bind() in C:\projects\quartznet\src\Quartz\Core\QuartzScheduler.cs:line 318
+   at Quartz.Core.QuartzScheduler.Initialize() in C:\projects\quartznet\src\Quartz\Core\QuartzScheduler.cs:line 297]
+2019-11-25 15:32:31,772 version:(null) [1] ERROR QuartzServiceLib.QuartzProgram`1 - Quartz.SchedulerException: Unable to bind scheduler to remoting. ---> System.Net.Sockets.SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at System.Net.Sockets.TcpListener.Start(Int32 backlog)
+   at System.Runtime.Remoting.Channels.ExclusiveTcpListener.Start(Boolean exclusiveAddressUse)
+   at System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.StartListening(Object data)
+   at System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.SetupChannel()
+   at System.Runtime.Remoting.Channels.Tcp.TcpServerChannel..ctor(IDictionary properties, IServerChannelSinkProvider sinkProvider, IAuthorizeRemotingConnection authorizeCallback)
+   at System.Runtime.Remoting.Channels.Tcp.TcpChannel..ctor(IDictionary properties, IClientChannelSinkProvider clientSinkProvider, IServerChannelSinkProvider serverSinkProvider)
+   at Quartz.Simpl.RemotingSchedulerExporter.RegisterRemotingChannelIfNeeded() in C:\projects\quartznet\src\Quartz\Simpl\RemotingSchedulerExporter.cs:line 132
+   at Quartz.Simpl.RemotingSchedulerExporter.Bind(IRemotableQuartzScheduler scheduler) in C:\projects\quartznet\src\Quartz\Simpl\RemotingSchedulerExporter.cs:line 78
+   at Quartz.Core.QuartzScheduler.Bind() in C:\projects\quartznet\src\Quartz\Core\QuartzScheduler.cs:line 318
+   at Quartz.Core.QuartzScheduler.Initialize() in C:\projects\quartznet\src\Quartz\Core\QuartzScheduler.cs:line 297
+   --- End of inner exception stack trace ---
+   at QuartzServiceLib.QuartzProgram`1.Start(String[] args) in C:\Users\briese\Source\Workspaces\Shared\QuartzServiceLib\QuartzProgram.cs:line 189
+   at QuartzServiceLib.QuartzProgram`1.ServiceMain(String[] args) in C:\Users\briese\Source\Workspaces\Shared\QuartzServiceLib\QuartzProgram.cs:line 125 [See nested exception: System.Net.Sockets.SocketException (0x80004005): Only one usage of each socket address (protocol/network address/port) is normally permitted
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at System.Net.Sockets.TcpListener.Start(Int32 backlog)
+   at System.Runtime.Remoting.Channels.ExclusiveTcpListener.Start(Boolean exclusiveAddressUse)
+   at System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.StartListening(Object data)
+   at System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.SetupChannel()
+   at System.Runtime.Remoting.Channels.Tcp.TcpServerChannel..ctor(IDictionary properties, IServerChannelSinkProvider sinkProvider, IAuthorizeRemotingConnection authorizeCallback)
+   at System.Runtime.Remoting.Channels.Tcp.TcpChannel..ctor(IDictionary properties, IClientChannelSinkProvider clientSinkProvider, IServerChannelSinkProvider serverSinkProvider)
+   at Quartz.Simpl.RemotingSchedulerExporter.RegisterRemotingChannelIfNeeded() in C:\projects\quartznet\src\Quartz\Simpl\RemotingSchedulerExporter.cs:line 132
+   at Quartz.Simpl.RemotingSchedulerExporter.Bind(IRemotableQuartzScheduler scheduler) in C:\projects\quartznet\src\Quartz\Simpl\RemotingSchedulerExporter.cs:line 78
+   at Quartz.Core.QuartzScheduler.Bind() in C:\projects\quartznet\src\Quartz\Core\QuartzScheduler.cs:line 318
+   at Quartz.Core.QuartzScheduler.Initialize() in C:\projects\quartznet\src\Quartz\Core\QuartzScheduler.cs:line 297]
+2019-11-25 15:34:19,436 version:(null) [1] INFO QuartzServiceLib.QuartzWrapper - Starting Quartz Scheduler
+2019-11-25 15:34:19,561 version:(null) [1] WARN Quartz.Simpl.TaskSchedulingThreadPool - Thread priority is no longer supported for thread pool, ignoring
+2019-11-25 15:34:19,593 version:(null) [1] INFO Quartz.Util.DBConnectionManager - Registering datasource 'default' with db provider: 'Quartz.Impl.AdoJobStore.Common.DbProvider'
+2019-11-25 15:34:19,600 version:(null) [1] INFO Quartz.Impl.StdSchedulerFactory - Using object serializer: Quartz.Simpl.BinaryObjectSerializer, Quartz
+2019-11-25 15:34:19,620 version:(null) [1] INFO Quartz.Core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-11-25 15:34:19,624 version:(null) [1] INFO Quartz.Core.QuartzScheduler - Quartz Scheduler v.3.0.7.0 created.
+2019-11-25 15:34:19,633 version:(null) [1] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2019-11-25 15:34:19,636 version:(null) [1] INFO Quartz.Impl.AdoJobStore.JobStoreTX - JobStoreTX initialized.
+2019-11-25 15:34:19,650 version:(null) [1] INFO Quartz.Simpl.RemotingSchedulerExporter - Remoting is allowing remote calls
+2019-11-25 15:34:19,651 version:(null) [1] INFO Quartz.Simpl.RemotingSchedulerExporter - Registering remoting channel of type 'System.Runtime.Remoting.Channels.Tcp.TcpChannel' to port (555) with name (httpQuartz)
+2019-11-25 15:34:19,653 version:(null) [1] INFO Quartz.Simpl.RemotingSchedulerExporter - Remoting channel registered successfully
+2019-11-25 15:34:19,655 version:(null) [1] INFO Quartz.Simpl.RemotingSchedulerExporter - Successfully marshalled remotable scheduler under name 'QuartzScheduler'
+2019-11-25 15:34:19,658 version:(null) [1] INFO Quartz.Core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'DEV-BR-9WYLM32-QuartzService' with instanceId 'DEV-BR-9WYLM32-QuartzService-QuartzService'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - access via remote invocation.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 5 threads.
+  Using job-store 'Quartz.Impl.AdoJobStore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2019-11-25 15:34:19,663 version:(null) [1] INFO Quartz.Impl.StdSchedulerFactory - Quartz scheduler 'DEV-BR-9WYLM32-QuartzService' initialized
+2019-11-25 15:34:19,665 version:(null) [1] INFO Quartz.Impl.StdSchedulerFactory - Quartz scheduler version: 3.0.7.0
+2019-11-25 15:34:19,786 version:(null) [5] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2019-11-25 15:34:19,815 version:(null) [8] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2019-11-25 15:34:19,817 version:(null) [8] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Recovery complete.
+2019-11-25 15:34:19,822 version:(null) [9] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Removed 0 'complete' triggers.
+2019-11-25 15:34:19,834 version:(null) [5] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Removed 0 stale fired job entries.
+2019-11-25 15:34:20,288 version:(null) [5] INFO Quartz.Core.QuartzScheduler - Scheduler DEV-BR-9WYLM32-QuartzService_$_DEV-BR-9WYLM32-QuartzService-QuartzService started.

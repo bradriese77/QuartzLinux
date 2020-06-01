@@ -12,7 +12,6 @@ using System.Threading.Tasks;
 
 namespace QuartzServiceLib
 {
-    [DisallowConcurrentExecution]
     [Export("QuartzServiceJob", typeof(IQuartzServiceJob))]
     public class ReflectionJob : QuartzServiceJob<ReflectionJob>
     {

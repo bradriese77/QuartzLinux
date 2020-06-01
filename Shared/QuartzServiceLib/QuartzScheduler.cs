@@ -1330,7 +1330,7 @@ public partial class QRTZ_JOB_HISTORY : INotifyPropertyChanging, INotifyProperty
 	
 	private string _TRIGGER_GROUP;
 	
-	private string _JOB_DATA;
+	private System.Data.Linq.Binary _JOB_DATA;
 	
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -1360,7 +1360,7 @@ public partial class QRTZ_JOB_HISTORY : INotifyPropertyChanging, INotifyProperty
     partial void OnTRIGGER_NAMEChanged();
     partial void OnTRIGGER_GROUPChanging(string value);
     partial void OnTRIGGER_GROUPChanged();
-    partial void OnJOB_DATAChanging(string value);
+    partial void OnJOB_DATAChanging(System.Data.Linq.Binary value);
     partial void OnJOB_DATAChanged();
     #endregion
 	
@@ -1609,8 +1609,8 @@ public partial class QRTZ_JOB_HISTORY : INotifyPropertyChanging, INotifyProperty
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_JOB_DATA", DbType= "NVarChar(MAX)", CanBeNull=true, UpdateCheck=UpdateCheck.Never)]
-	public string JOB_DATA
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_JOB_DATA", DbType="VarBinary(MAX)", CanBeNull=true, UpdateCheck=UpdateCheck.Never)]
+	public System.Data.Linq.Binary JOB_DATA
 	{
 		get
 		{
@@ -1641,7 +1641,23 @@ public partial class QRTZ_JOB_HISTORY : INotifyPropertyChanging, INotifyProperty
         }
 
     }
+    private string _JOB_DATA_JSON;
+    public string JOB_DATA_JSON
+    {
+        get
+        {
+            if(_JOB_DATA_JSON==null && _JOB_DATA !=null)
+            {
+                _JOB_DATA_JSON=JobDataToJSON(_JOB_DATA);
+            }
+            return _JOB_DATA_JSON;
+        }
+        set
+        {
+            _JOB_DATA_JSON = value;
+        }
 
+    }
 	public event PropertyChangingEventHandler PropertyChanging;
 	
 	public event PropertyChangedEventHandler PropertyChanged;

@@ -13,6 +13,8 @@ using System.Reflection;
 using QuartzServiceLib;
 using AppUtilityLib;
 using System.Collections.Specialized;
+using Newtonsoft.Json;
+using System.IO;
 
 namespace QuartzServiceLib
 {
@@ -144,6 +146,42 @@ namespace QuartzServiceLib
             ScheduleJobTypes(GetJobTypes());
 
         }
+        public void UpdateQuartzJobData()
+        {
+            QuartzWrapper quartz = new QuartzWrapper(quartzJobStoreSettings.GetQuartzSettings());
+            IReadOnlyList<IQuartzServiceJob> jobs = quartz.GetJobsFromTypes(GetJobTypes());
+            foreach (IQuartzServiceJob job in jobs)
+            {
+                IJobDetail d = job.JobDetail.Build();
+                IJobDetail d2=quartz.Scheduler.GetJobDetail(d.Key).Result;
+                bool DoUpdate = false;
+                if (d2 != null)
+                {
+                    foreach(string Key in d.JobDataMap.Keys)
+                    {
+                        d2.JobDataMap[Key] = d.JobDataMap[Key];
+                        DoUpdate = true;
+                    }
+                    if(DoUpdate)
+                    quartz.Scheduler.AddJob(d2, true).GetAwaiter().GetResult();
+
+
+                }
+            }
+        }
+        public void BackupQuartzJobDetails(string Path)
+        {
+            QuartzWrapper quartz = new QuartzWrapper(quartzJobStoreSettings.GetQuartzSettings());
+            IReadOnlyList<IQuartzServiceJob> jobs = quartz.GetJobsFromTypes(GetJobTypes());
+            List<IJobDetail> JobDetails = new List<IJobDetail>();
+            foreach (IJobDetail d in quartz.GetJobs())
+            {
+                JobDetails.Add(d);
+                
+            }
+            string Json=JsonConvert.SerializeObject(JobDetails);
+            File.WriteAllText(Path, Json);
+        }
         public void AddQuartzJob(string TypeName)
         {
             ScheduleReflectionJobTypes(GetJobTypes().Where(t => t.Name == TypeName).ToArray());
@@ -242,8 +280,25 @@ namespace QuartzServiceLib
         public static List<IJobDetail> GetJobDetail(string JobName = "", string TriggerName = "", string JobGroup = "", string TriggerGroup = "")
         {
             QuartzWrapper quartz = new QuartzWrapper(quartzJobStoreSettings.GetQuartzSettings());
-            var jobs = from j in quartz.GetJobs() where (string.IsNullOrEmpty(JobName) || j.Key.Name == JobName) && (string.IsNullOrEmpty(JobGroup) || j.Key.Group == JobGroup) select j;
-            var response = jobs.ToList();
+            var jobs = from j in quartz.GetJobs() where (string.IsNullOrEmpty(JobName) || j.Key.Name == JobName) && (string.IsNullOrEmpty(JobGroup) || j.Key.Group == JobGroup)  select j;
+            List<IJobDetail> jobsfound = new List<IJobDetail>();
+            if (!string.IsNullOrEmpty(TriggerGroup) || !string.IsNullOrEmpty(TriggerName))
+            {
+                foreach (IJobDetail job in jobs)
+                {
+                    if(quartz.Scheduler.GetTriggersOfJob(job.Key).Result.Where(t => (string.IsNullOrEmpty(TriggerName) || t.Key.Name == TriggerName) && (string.IsNullOrEmpty(TriggerGroup) || t.Key.Group == TriggerGroup)).Any())
+                    {
+                        jobsfound.Add(job);
+                    }
+                }
+            }
+            else
+            {
+
+                jobsfound = jobs.ToList();
+            }
+
+            var response = jobsfound;
             quartz.Scheduler = null;
             quartz = null;
             return response;

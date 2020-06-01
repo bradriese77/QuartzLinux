@@ -1,0 +1,74 @@
+2019-11-27 08:29:15,455 version:(null) [15] INFO QuartzService.Program - Executing GetPayrollCompliance
+2019-11-27 08:29:16,834 version:(null) [15] INFO QuartzService.Program - Exported 1465 Row(s) to \\\scprdnas02\Development\PayrollReportingUtility\ComplianceExport\PayrollReportingComplianceExport_09-01-2019_09-15-2019.csv
+2019-11-27 08:29:16,834 version:(null) [15] INFO QuartzService.Program - Completed Calling PayrollReportingServiceUtility.ComplianceExporterJob
+2019-11-27 08:30:57,421 version:(null) [15] INFO QuartzService.Program - Executing GetPayrollCompliance
+2019-11-27 08:30:58,030 version:(null) [15] ERROR QuartzService.Program - Failed to execute the sql declare @return_value int;
+exec [GetPayrollCompliance]
+	@starttimekey = 20190901
+	, @endtimekey = 20190915
+	, @export = 1
+;
+select 'Return Value' = convert(varchar, @return_value);
+
+2019-11-27 08:30:58,045 version:(null) [15] ERROR QuartzService.Program - System.Exception: Compliance Export already exist for date range
+   at PayrollReportingServiceUtility.ComplianceExporterJob.ExecuteJob(IJobExecutionContext context) in C:\Users\briese\Source\Workspaces\PayrollUtilities\PayrollReportingUtility\PayrollReportingUtility\ComplianceExporterJob.cs:line 104
+2019-11-27 08:30:58,045 version:(null) [15] INFO QuartzService.Program - Completed Calling PayrollReportingServiceUtility.ComplianceExporterJob
+2019-11-27 08:32:42,061 version:(null) [15] INFO QuartzService.Program - Executing GetPayrollCompliance
+2019-11-27 08:32:42,560 version:(null) [15] INFO QuartzService.Program - Exported 1465 Row(s) to \\\scprdnas02\Development\PayrollReportingUtility\ComplianceExport\PayrollReportingComplianceExport_09-01-2019_09-15-2019.csv
+2019-11-27 08:32:42,560 version:(null) [15] INFO QuartzService.Program - Completed Calling PayrollReportingServiceUtility.ComplianceExporterJob
+2019-11-27 08:33:28,769 version:(null) [13] INFO QuartzService.Program - Calling PayrollReportingServiceUtility.ComplianceExporterJob
+2019-11-27 08:33:52,717 version:(null) [13] INFO QuartzService.Program - Executing GetPayrollCompliance
+2019-11-27 08:33:52,904 version:(null) [13] ERROR QuartzService.Program - Failed to execute the sql declare @return_value int;
+exec [GetPayrollCompliance]
+	@starttimekey = 20190901
+	, @endtimekey = 20190915
+	, @export = 1
+;
+select 'Return Value' = convert(varchar, @return_value);
+
+2019-11-27 08:33:52,920 version:(null) [13] ERROR QuartzService.Program - System.Exception: Compliance Export already exist for date range
+   at PayrollReportingServiceUtility.ComplianceExporterJob.ExecuteJob(IJobExecutionContext context) in C:\Users\briese\Source\Workspaces\PayrollUtilities\PayrollReportingUtility\PayrollReportingUtility\ComplianceExporterJob.cs:line 104
+2019-11-27 08:33:52,935 version:(null) [13] INFO QuartzService.Program - Completed Calling PayrollReportingServiceUtility.ComplianceExporterJob
+2019-11-27 08:34:43,730 version:(null) [22] INFO QuartzService.Program - Calling PayrollReportingServiceUtility.ComplianceExporterJob
+2019-11-27 08:34:50,621 version:(null) [22] INFO QuartzService.Program - Executing GetPayrollCompliance
+2019-11-27 08:34:51,793 version:(null) [22] INFO QuartzService.Program - Exported 1476 Row(s) to \\\scprdnas02\Development\PayrollReportingUtility\ComplianceExport\PayrollReportingComplianceExport_09-16-2019_09-30-2019.csv
+2019-11-27 08:34:51,793 version:(null) [22] INFO QuartzService.Program - Completed Calling PayrollReportingServiceUtility.ComplianceExporterJob
+2019-11-27 08:35:32,164 version:(null) [26] INFO QuartzService.Program - Calling PayrollReportingServiceUtility.ComplianceExporterJob
+2019-11-27 08:35:33,955 version:(null) [26] INFO QuartzService.Program - Executing GetPayrollCompliance
+2019-11-27 08:35:34,800 version:(null) [26] INFO QuartzService.Program - Exported 1897 Row(s) to \\\scprdnas02\Development\PayrollReportingUtility\ComplianceExport\PayrollReportingComplianceExport_10-01-2019_10-16-2019.csv
+2019-11-27 08:35:34,802 version:(null) [26] INFO QuartzService.Program - Completed Calling PayrollReportingServiceUtility.ComplianceExporterJob
+2019-11-27 08:36:57,533 version:(null) [24] INFO QuartzService.Program - Calling PayrollReportingServiceUtility.ComplianceExporterJob
+2019-11-27 08:37:04,776 version:(null) [24] INFO QuartzService.Program - Executing GetPayrollCompliance
+2019-11-27 08:37:05,897 version:(null) [24] INFO QuartzService.Program - Exported 1753 Row(s) to \\\scprdnas02\Development\PayrollReportingUtility\ComplianceExport\PayrollReportingComplianceExport_10-01-2019_10-15-2019.csv
+2019-11-27 08:37:05,897 version:(null) [24] INFO QuartzService.Program - Completed Calling PayrollReportingServiceUtility.ComplianceExporterJob
+2019-11-27 08:37:46,699 version:(null) [39] INFO QuartzService.Program - Calling PayrollReportingServiceUtility.ComplianceExporterJob
+2019-11-27 08:37:49,548 version:(null) [39] INFO QuartzService.Program - Executing GetPayrollCompliance
+2019-11-27 08:37:50,418 version:(null) [39] INFO QuartzService.Program - Exported 2072 Row(s) to \\\scprdnas02\Development\PayrollReportingUtility\ComplianceExport\PayrollReportingComplianceExport_10-16-2019_10-31-2019.csv
+2019-11-27 08:37:50,434 version:(null) [39] INFO QuartzService.Program - Completed Calling PayrollReportingServiceUtility.ComplianceExporterJob
+2019-11-27 12:28:19,556 version:(null) [15] ERROR QuartzService.Program - OpenQA.Selenium.DriverServiceNotFoundException: The file c:\apps\PayrollReportingServiceUtility\Chrome\chromedriver.exe does not exist. The driver can be downloaded at http://chromedriver.storage.googleapis.com/index.html
+   at OpenQA.Selenium.DriverService..ctor(String servicePath, Int32 port, String driverServiceExecutableName, Uri driverServiceDownloadUrl)
+   at OpenQA.Selenium.Chrome.ChromeDriverService..ctor(String executablePath, String executableFileName, Int32 port)
+   at OpenQA.Selenium.Chrome.ChromeDriver..ctor(String chromeDriverDirectory, ChromeOptions options)
+   at OpenQA.Selenium.Chrome.ChromeDriver..ctor(String chromeDriverDirectory)
+   at UltiProChromeUtilityLib.UltiProChromeUtility.RunReport(String ReportUrl, String UserName, String PassWord, String Date1, String Date2, String Path, Boolean BeInterActive) in C:\Users\briese\Source\Workspaces\Shared\UltiProChromeUtilityLib\UltiProChromeUtility.cs:line 187
+2019-11-27 12:30:14,502 version:(null) [15] ERROR QuartzService.Program - System.MissingMethodException: Method 'PayrollReportingServiceUtility.TimeClockActivityFileProcessorJob.ExecuteJob' not found.
+   at System.RuntimeType.InvokeMember(String name, BindingFlags bindingFlags, Binder binder, Object target, Object[] providedArgs, ParameterModifier[] modifiers, CultureInfo culture, String[] namedParams)
+   at System.Type.InvokeMember(String name, BindingFlags invokeAttr, Binder binder, Object target, Object[] args)
+   at AppUtilityLib.AppUtility.CallMethod(Object obj, String MethodName, Object target, Object[] args) in C:\Users\briese\Source\Workspaces\Shared\AppUtilityLib\AppUtilityLib\AppUtility.cs:line 385
+   at AppUtilityLib.AppUtility.CallMethod(Object obj, String MethodName, Object target) in C:\Users\briese\Source\Workspaces\Shared\AppUtilityLib\AppUtilityLib\AppUtility.cs:line 377
+   at AppUtilityLib.AppUtility.CallMethod(Object obj, String MethodName) in C:\Users\briese\Source\Workspaces\Shared\AppUtilityLib\AppUtilityLib\AppUtility.cs:line 373
+   at PayrollReportingServiceUtility.UltiProExporterJob`1.RunJob() in C:\Users\briese\Source\Workspaces\PayrollUtilities\PayrollReportingUtility\PayrollReportingUtility\UltiProExporterJob.cs:line 65
+2019-11-27 12:30:14,517 version:(null) [15] INFO QuartzService.Program - SendEmail To: briese@mom365.com Subject: Error(s) Processing TimeClockActivityFileExporterJob Message: TimeClockActivityFileExporterJob completed with Errors
+System.MissingMethodException: Method 'PayrollReportingServiceUtility.TimeClockActivityFileProcessorJob.ExecuteJob' not found.
+   at System.RuntimeType.InvokeMember(String name, BindingFlags bindingFlags, Binder binder, Object target, Object[] providedArgs, ParameterModifier[] modifiers, CultureInfo culture, String[] namedParams)
+   at System.Type.InvokeMember(String name, BindingFlags invokeAttr, Binder binder, Object target, Object[] args)
+   at AppUtilityLib.AppUtility.CallMethod(Object obj, String MethodName, Object target, Object[] args) in C:\Users\briese\Source\Workspaces\Shared\AppUtilityLib\AppUtilityLib\AppUtility.cs:line 385
+   at AppUtilityLib.AppUtility.CallMethod(Object obj, String MethodName, Object target) in C:\Users\briese\Source\Workspaces\Shared\AppUtilityLib\AppUtilityLib\AppUtility.cs:line 377
+   at AppUtilityLib.AppUtility.CallMethod(Object obj, String MethodName) in C:\Users\briese\Source\Workspaces\Shared\AppUtilityLib\AppUtilityLib\AppUtility.cs:line 373
+   at PayrollReportingServiceUtility.UltiProExporterJob`1.RunJob() in C:\Users\briese\Source\Workspaces\PayrollUtilities\PayrollReportingUtility\PayrollReportingUtility\UltiProExporterJob.cs:line 65 FilePaths: 
+2019-11-27 12:52:50,819 version:(null) [19] INFO QuartzService.Program - Processing \\scprdnas02\Development\PayrollReportingUtility\TimeClockActivity for Actual_Hours_*.xlsx
+2019-11-27 12:52:50,846 version:(null) [19] INFO QuartzService.Program - Completed Calling PayrollReportingServiceUtility.TimeClockActivityFileExporterJob
+2019-11-27 12:54:58,775 version:(null) [27] INFO QuartzService.Program - Calling PayrollReportingServiceUtility.SchedulingFileExporterJob
+2019-11-27 12:55:39,564 version:(null) [27] INFO QuartzService.Program - Processing \\scprdnas02\Development\PayrollReportingUtility\Scheduling for Actual-vs-Scheduled_*.csv
+2019-11-27 12:55:39,570 version:(null) [27] INFO QuartzService.Program - Completed Calling PayrollReportingServiceUtility.SchedulingFileExporterJob
+2019-11-27 12:57:11,361 version:(null) [47] INFO QuartzService.Program - Calling PayrollReportingServiceUtility.SchedulingFileExporterPayPeriodJob

@@ -1,0 +1,395 @@
+2019-12-09 08:52:10,928 version:(null) [1] ERROR QuartzService.Program - System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+   at System.Diagnostics.EventLog.FindSourceRegistration(String source, String machineName, Boolean readOnly, Boolean wantToCreate)
+   at System.Diagnostics.EventLog.SourceExists(String source, String machineName, Boolean wantToCreate)
+   at System.Diagnostics.EventLogInstaller.Install(IDictionary stateSaver)
+   at System.Configuration.Install.Installer.Install(IDictionary stateSaver)
+   at System.ServiceProcess.ServiceInstaller.Install(IDictionary stateSaver)
+   at System.Configuration.Install.Installer.Install(IDictionary stateSaver)
+   at System.Configuration.Install.Installer.Install(IDictionary stateSaver)
+   at System.Configuration.Install.AssemblyInstaller.Install(IDictionary savedState)
+   at QuartzServiceLib.QuartzServiceInstaller.InstallService() in C:\Users\briese\Source\Workspaces\Shared\QuartzServiceLib\QuartzServiceInstaller.cs:line 102
+   at QuartzServiceLib.QuartzProgram`1.Install() in C:\Users\briese\Source\Workspaces\Shared\QuartzServiceLib\QuartzProgram.cs:line 159
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at AppUtilityLib.AppUtility.ReflectCmdArgs(String[] args) in C:\Users\briese\Source\Workspaces\Shared\AppUtilityLib\AppUtilityLib\AppUtility.cs:line 98
+   at QuartzService.Program.Main(String[] args) in C:\Users\briese\Source\Workspaces\Shared\QuartzService\Program.cs:line 35
+2019-12-09 08:53:34,415 version:(null) [4] INFO QuartzServiceLib.QuartzWrapper - Starting Quartz Scheduler
+2019-12-09 08:53:34,505 version:(null) [4] WARN Quartz.Simpl.TaskSchedulingThreadPool - Thread priority is no longer supported for thread pool, ignoring
+2019-12-09 08:53:34,527 version:(null) [4] INFO Quartz.Util.DBConnectionManager - Registering datasource 'default' with db provider: 'Quartz.Impl.AdoJobStore.Common.DbProvider'
+2019-12-09 08:53:34,533 version:(null) [4] INFO Quartz.Impl.StdSchedulerFactory - Using object serializer: Quartz.Simpl.BinaryObjectSerializer, Quartz
+2019-12-09 08:53:34,553 version:(null) [4] INFO Quartz.Core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-12-09 08:53:34,557 version:(null) [4] INFO Quartz.Core.QuartzScheduler - Quartz Scheduler v.3.0.7.0 created.
+2019-12-09 08:53:34,566 version:(null) [4] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2019-12-09 08:53:34,569 version:(null) [4] INFO Quartz.Impl.AdoJobStore.JobStoreTX - JobStoreTX initialized.
+2019-12-09 08:53:34,583 version:(null) [4] INFO Quartz.Simpl.RemotingSchedulerExporter - Remoting is allowing remote calls
+2019-12-09 08:53:34,584 version:(null) [4] INFO Quartz.Simpl.RemotingSchedulerExporter - Registering remoting channel of type 'System.Runtime.Remoting.Channels.Tcp.TcpChannel' to port (555) with name (httpQuartz)
+2019-12-09 08:53:34,586 version:(null) [4] INFO Quartz.Simpl.RemotingSchedulerExporter - Remoting channel registered successfully
+2019-12-09 08:53:34,588 version:(null) [4] INFO Quartz.Simpl.RemotingSchedulerExporter - Successfully marshalled remotable scheduler under name 'QuartzScheduler'
+2019-12-09 08:53:34,591 version:(null) [4] INFO Quartz.Core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'DEV-BR-9WYLM32-QuartzService' with instanceId 'DEV-BR-9WYLM32-QuartzService'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - access via remote invocation.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 5 threads.
+  Using job-store 'Quartz.Impl.AdoJobStore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2019-12-09 08:53:34,592 version:(null) [4] INFO Quartz.Impl.StdSchedulerFactory - Quartz scheduler 'DEV-BR-9WYLM32-QuartzService' initialized
+2019-12-09 08:53:34,594 version:(null) [4] INFO Quartz.Impl.StdSchedulerFactory - Quartz scheduler version: 3.0.7.0
+2019-12-09 08:53:34,815 version:(null) [4] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2019-12-09 08:53:34,828 version:(null) [11] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Handling 1 trigger(s) that missed their scheduled fire-time.
+2019-12-09 08:53:34,910 version:(null) [7] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2019-12-09 08:53:34,911 version:(null) [7] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Recovery complete.
+2019-12-09 08:53:34,916 version:(null) [7] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Removed 0 'complete' triggers.
+2019-12-09 08:53:34,920 version:(null) [7] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Removed 0 stale fired job entries.
+2019-12-09 08:53:35,128 version:(null) [7] INFO Quartz.Core.QuartzScheduler - Scheduler DEV-BR-9WYLM32-QuartzService_$_DEV-BR-9WYLM32-QuartzService started.
+2019-12-09 08:53:35,207 version:(null) [14] INFO QuartzService.Program - Calling QuartzServiceLib.PurgeJob
+2019-12-09 08:53:35,254 version:(null) [14] INFO QuartzService.Program - Running LogFilePurge1 Purge
+2019-12-09 08:53:35,257 version:(null) [14] INFO QuartzService.Program - Purging Files *_PayrollReportingServiceUtility.log from C:\apps\PayrollReportingServiceUtility\logs\ DaysBack 14 Recurse False
+2019-12-09 08:53:35,258 version:(null) [14] INFO QuartzService.Program - Running LogFilePurge2 Purge
+2019-12-09 08:53:35,259 version:(null) [14] INFO QuartzService.Program - Purging Files *.log from C:\apps\QuartzService\logs\ DaysBack 14 Recurse False
+2019-12-09 08:53:35,261 version:(null) [14] INFO QuartzService.Program - Running TBToFileArchivePurge Purge
+2019-12-09 08:53:35,262 version:(null) [14] INFO QuartzService.Program - Purging Files TB_*.csv from \\scprdnas02\Development\Tinybeans\Archive DaysBack 30 Recurse False
+2019-12-09 08:53:35,364 version:(null) [14] INFO QuartzService.Program - Deleting \\scprdnas02\Development\Tinybeans\Archive\TB_BUYERANYPRODUCT_110919_041541.CSV
+2019-12-09 08:53:35,368 version:(null) [14] INFO QuartzService.Program - Successfully Deleted \\scprdnas02\Development\Tinybeans\Archive\TB_BUYERANYPRODUCT_110919_041541.CSV
+2019-12-09 08:53:35,426 version:(null) [14] INFO QuartzService.Program - Deleting \\scprdnas02\Development\Tinybeans\Archive\TB_BUYER_110919_040040.CSV
+2019-12-09 08:53:35,430 version:(null) [14] INFO QuartzService.Program - Successfully Deleted \\scprdnas02\Development\Tinybeans\Archive\TB_BUYER_110919_040040.CSV
+2019-12-09 08:53:35,485 version:(null) [14] INFO QuartzService.Program - Deleting \\scprdnas02\Development\Tinybeans\Archive\TB_NONBUYER_110919_043040.CSV
+2019-12-09 08:53:35,489 version:(null) [14] INFO QuartzService.Program - Successfully Deleted \\scprdnas02\Development\Tinybeans\Archive\TB_NONBUYER_110919_043040.CSV
+2019-12-09 08:53:35,540 version:(null) [14] INFO QuartzService.Program - Running LogFilePurge3 Purge
+2019-12-09 08:53:35,542 version:(null) [14] INFO QuartzService.Program - Purging Files *_TinyBeansStatusUpdates.log from C:\apps\TinybeansStatusUpdates\logs\ DaysBack 14 Recurse False
+2019-12-09 08:53:35,543 version:(null) [14] INFO QuartzService.Program - Running LogFilePurge4 Purge
+2019-12-09 08:53:35,544 version:(null) [14] INFO QuartzService.Program - Purging Files *.log from C:\apps\MissingCashUtility\logs\ DaysBack 14 Recurse False
+2019-12-09 08:53:35,546 version:(null) [4] ERROR QuartzService.Program - System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.AggregateException: One or more errors occurred. ---> System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\apps\PayrollReportingServiceUtility\logs'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.Directory.GetFiles(String path, String searchPattern)
+   at QuartzServiceLib.PurgeRequest.PurgeFiles(String Folder) in C:\Users\briese\Source\Workspaces\Shared\QuartzServiceLib\PurgeRequest.cs:line 50
+   at QuartzServiceLib.PurgeRequest.Purge() in C:\Users\briese\Source\Workspaces\Shared\QuartzServiceLib\PurgeRequest.cs:line 37
+   at QuartzServiceLib.PurgeJob.ExecuteJob(IJobExecutionContext context) in C:\Users\briese\Source\Workspaces\Shared\QuartzServiceLib\PurgeJob.cs:line 54
+   --- End of inner exception stack trace ---
+   at QuartzServiceLib.PurgeJob.ExecuteJob(IJobExecutionContext context) in C:\Users\briese\Source\Workspaces\Shared\QuartzServiceLib\PurgeJob.cs:line 62
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.RuntimeType.InvokeMember(String name, BindingFlags bindingFlags, Binder binder, Object target, Object[] providedArgs, ParameterModifier[] modifiers, CultureInfo culture, String[] namedParams)
+   at System.Type.InvokeMember(String name, BindingFlags invokeAttr, Binder binder, Object target, Object[] args)
+   at AppUtilityLib.AppUtility.CallMethod(Object obj, String MethodName, Object target, Object[] args) in C:\Users\briese\Source\Workspaces\Shared\AppUtilityLib\AppUtilityLib\AppUtility.cs:line 390
+   at AppUtilityLib.AppUtility.CallMethod(Object obj, String MethodName, Object target, Object arg) in C:\Users\briese\Source\Workspaces\Shared\AppUtilityLib\AppUtilityLib\AppUtility.cs:line 386
+   at QuartzServiceLib.ReflectionJob.ExecuteJob(IJobExecutionContext context) in C:\Users\briese\Source\Workspaces\Shared\QuartzServiceLib\ReflectionJob.cs:line 41
+   at QuartzServiceLib.QuartzServiceJob`1.<>c__DisplayClass32_0.<Execute>b__1() in C:\Users\briese\Source\Workspaces\Shared\QuartzServiceLib\QuartzServiceJob.cs:line 141
+   at QuartzServiceLib.QuartzServiceJob`1.<>c__DisplayClass34_0.<StartSTATask>b__0() in C:\Users\briese\Source\Workspaces\Shared\QuartzServiceLib\QuartzServiceJob.cs:line 168
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at QuartzServiceLib.QuartzServiceJob`1.<>c__DisplayClass32_0.<Execute>b__0() in C:\Users\briese\Source\Workspaces\Shared\QuartzServiceLib\QuartzServiceJob.cs:line 141
+2019-12-09 11:10:00,066 version:(null) [20] INFO QuartzService.Program - Calling QuartzServiceLib.PurgeJob
+2019-12-09 11:10:00,115 version:(null) [20] INFO QuartzService.Program - Running LogFilePurge1 Purge
+2019-12-09 11:10:00,116 version:(null) [20] INFO QuartzService.Program - Purging Files *_PayrollReportingServiceUtility.log from C:\apps\PayrollReportingServiceUtility\logs\ DaysBack 14 Recurse False
+2019-12-09 11:10:00,117 version:(null) [20] INFO QuartzService.Program - Running LogFilePurge2 Purge
+2019-12-09 11:10:00,118 version:(null) [20] INFO QuartzService.Program - Purging Files *.log from C:\apps\QuartzService\logs\ DaysBack 14 Recurse False
+2019-12-09 11:10:00,119 version:(null) [20] INFO QuartzService.Program - Running TBToFileArchivePurge Purge
+2019-12-09 11:10:00,120 version:(null) [20] INFO QuartzService.Program - Purging Files TB_*.csv from \\scprdnas02\Development\Tinybeans\Archive DaysBack 30 Recurse False
+2019-12-09 11:10:00,515 version:(null) [20] INFO QuartzService.Program - Running LogFilePurge3 Purge
+2019-12-09 11:10:00,516 version:(null) [20] INFO QuartzService.Program - Purging Files *_TinyBeansStatusUpdates.log from C:\apps\TinybeansStatusUpdates\logs\ DaysBack 14 Recurse False
+2019-12-09 11:10:00,517 version:(null) [20] INFO QuartzService.Program - Running LogFilePurge4 Purge
+2019-12-09 11:10:00,518 version:(null) [20] INFO QuartzService.Program - Purging Files *.log from C:\apps\MissingCashUtility\logs\ DaysBack 14 Recurse False
+2019-12-09 11:10:00,520 version:(null) [23] ERROR QuartzService.Program - System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.AggregateException: One or more errors occurred. ---> System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\apps\PayrollReportingServiceUtility\logs'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.Directory.GetFiles(String path, String searchPattern)
+   at QuartzServiceLib.PurgeRequest.PurgeFiles(String Folder) in C:\Users\briese\Source\Workspaces\Shared\QuartzServiceLib\PurgeRequest.cs:line 50
+   at QuartzServiceLib.PurgeRequest.Purge() in C:\Users\briese\Source\Workspaces\Shared\QuartzServiceLib\PurgeRequest.cs:line 37
+   at QuartzServiceLib.PurgeJob.ExecuteJob(IJobExecutionContext context) in C:\Users\briese\Source\Workspaces\Shared\QuartzServiceLib\PurgeJob.cs:line 54
+   --- End of inner exception stack trace ---
+   at QuartzServiceLib.PurgeJob.ExecuteJob(IJobExecutionContext context) in C:\Users\briese\Source\Workspaces\Shared\QuartzServiceLib\PurgeJob.cs:line 62
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.RuntimeType.InvokeMember(String name, BindingFlags bindingFlags, Binder binder, Object target, Object[] providedArgs, ParameterModifier[] modifiers, CultureInfo culture, String[] namedParams)
+   at System.Type.InvokeMember(String name, BindingFlags invokeAttr, Binder binder, Object target, Object[] args)
+   at AppUtilityLib.AppUtility.CallMethod(Object obj, String MethodName, Object target, Object[] args) in C:\Users\briese\Source\Workspaces\Shared\AppUtilityLib\AppUtilityLib\AppUtility.cs:line 390
+   at AppUtilityLib.AppUtility.CallMethod(Object obj, String MethodName, Object target, Object arg) in C:\Users\briese\Source\Workspaces\Shared\AppUtilityLib\AppUtilityLib\AppUtility.cs:line 386
+   at QuartzServiceLib.ReflectionJob.ExecuteJob(IJobExecutionContext context) in C:\Users\briese\Source\Workspaces\Shared\QuartzServiceLib\ReflectionJob.cs:line 41
+   at QuartzServiceLib.QuartzServiceJob`1.<>c__DisplayClass32_0.<Execute>b__1() in C:\Users\briese\Source\Workspaces\Shared\QuartzServiceLib\QuartzServiceJob.cs:line 141
+   at QuartzServiceLib.QuartzServiceJob`1.<>c__DisplayClass34_0.<StartSTATask>b__0() in C:\Users\briese\Source\Workspaces\Shared\QuartzServiceLib\QuartzServiceJob.cs:line 168
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at QuartzServiceLib.QuartzServiceJob`1.<>c__DisplayClass32_0.<Execute>b__0() in C:\Users\briese\Source\Workspaces\Shared\QuartzServiceLib\QuartzServiceJob.cs:line 141
+2019-12-09 12:16:45,374 version:(null) [77] INFO QuartzServiceLib.QuartzWrapper - Stopping Quartz Scheduler, waiting for 0 jobs to stop
+2019-12-09 12:16:45,389 version:(null) [77] INFO Quartz.Core.QuartzScheduler - Scheduler DEV-BR-9WYLM32-QuartzService_$_DEV-BR-9WYLM32-QuartzService shutting down.
+2019-12-09 12:16:45,393 version:(null) [77] INFO Quartz.Core.QuartzScheduler - Scheduler DEV-BR-9WYLM32-QuartzService_$_DEV-BR-9WYLM32-QuartzService paused.
+2019-12-09 12:16:45,397 version:(null) [77] INFO QuartzServiceLib.QuartzWrapper - Scheduler Stopped
+2019-12-09 12:16:45,401 version:(null) [67] INFO Quartz.Simpl.RemotingSchedulerExporter - Successfully disconnected remotable scheduler
+2019-12-09 12:16:45,432 version:(null) [67] INFO Quartz.Core.QuartzScheduler - Scheduler DEV-BR-9WYLM32-QuartzService_$_DEV-BR-9WYLM32-QuartzService Shutdown complete.
+2019-12-09 12:53:15,477 version:(null) [4] INFO QuartzServiceLib.QuartzWrapper - Starting Quartz Scheduler
+2019-12-09 12:53:15,581 version:(null) [4] WARN Quartz.Simpl.TaskSchedulingThreadPool - Thread priority is no longer supported for thread pool, ignoring
+2019-12-09 12:53:15,608 version:(null) [4] INFO Quartz.Util.DBConnectionManager - Registering datasource 'default' with db provider: 'Quartz.Impl.AdoJobStore.Common.DbProvider'
+2019-12-09 12:53:15,615 version:(null) [4] INFO Quartz.Impl.StdSchedulerFactory - Using object serializer: Quartz.Simpl.BinaryObjectSerializer, Quartz
+2019-12-09 12:53:15,641 version:(null) [4] INFO Quartz.Core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-12-09 12:53:15,646 version:(null) [4] INFO Quartz.Core.QuartzScheduler - Quartz Scheduler v.3.0.7.0 created.
+2019-12-09 12:53:15,657 version:(null) [4] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2019-12-09 12:53:15,661 version:(null) [4] INFO Quartz.Impl.AdoJobStore.JobStoreTX - JobStoreTX initialized.
+2019-12-09 12:53:15,676 version:(null) [4] INFO Quartz.Simpl.RemotingSchedulerExporter - Remoting is allowing remote calls
+2019-12-09 12:53:15,678 version:(null) [4] INFO Quartz.Simpl.RemotingSchedulerExporter - Registering remoting channel of type 'System.Runtime.Remoting.Channels.Tcp.TcpChannel' to port (555) with name (httpQuartz)
+2019-12-09 12:53:15,679 version:(null) [4] INFO Quartz.Simpl.RemotingSchedulerExporter - Remoting channel registered successfully
+2019-12-09 12:53:15,680 version:(null) [4] INFO Quartz.Simpl.RemotingSchedulerExporter - Successfully marshalled remotable scheduler under name 'QuartzScheduler'
+2019-12-09 12:53:15,684 version:(null) [4] INFO Quartz.Core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'DEV-BR-9WYLM32-QuartzService' with instanceId 'DEV-BR-9WYLM32-QuartzService'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - access via remote invocation.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 5 threads.
+  Using job-store 'Quartz.Impl.AdoJobStore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2019-12-09 12:53:15,685 version:(null) [4] INFO Quartz.Impl.StdSchedulerFactory - Quartz scheduler 'DEV-BR-9WYLM32-QuartzService' initialized
+2019-12-09 12:53:15,686 version:(null) [4] INFO Quartz.Impl.StdSchedulerFactory - Quartz scheduler version: 3.0.7.0
+2019-12-09 12:53:15,771 version:(null) [13] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2019-12-09 12:53:15,797 version:(null) [7] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2019-12-09 12:53:15,799 version:(null) [7] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Recovery complete.
+2019-12-09 12:53:15,806 version:(null) [4] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Removed 0 'complete' triggers.
+2019-12-09 12:53:15,812 version:(null) [4] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Removed 0 stale fired job entries.
+2019-12-09 12:53:16,102 version:(null) [4] INFO Quartz.Core.QuartzScheduler - Scheduler DEV-BR-9WYLM32-QuartzService_$_DEV-BR-9WYLM32-QuartzService started.
+2019-12-09 12:55:33,629 version:(null) [3] INFO QuartzServiceLib.QuartzWrapper - Stopping Quartz Scheduler, waiting for 0 jobs to stop
+2019-12-09 12:55:33,633 version:(null) [3] INFO Quartz.Core.QuartzScheduler - Scheduler DEV-BR-9WYLM32-QuartzService_$_DEV-BR-9WYLM32-QuartzService shutting down.
+2019-12-09 12:55:33,639 version:(null) [3] INFO Quartz.Core.QuartzScheduler - Scheduler DEV-BR-9WYLM32-QuartzService_$_DEV-BR-9WYLM32-QuartzService paused.
+2019-12-09 12:55:33,643 version:(null) [3] INFO QuartzServiceLib.QuartzWrapper - Scheduler Stopped
+2019-12-09 12:55:33,646 version:(null) [16] INFO Quartz.Simpl.RemotingSchedulerExporter - Successfully disconnected remotable scheduler
+2019-12-09 12:55:33,657 version:(null) [16] INFO Quartz.Core.QuartzScheduler - Scheduler DEV-BR-9WYLM32-QuartzService_$_DEV-BR-9WYLM32-QuartzService Shutdown complete.
+2019-12-09 12:55:45,807 version:(null) [1] INFO QuartzServiceLib.QuartzWrapper - Starting Quartz Scheduler
+2019-12-09 12:55:45,953 version:(null) [1] WARN Quartz.Simpl.TaskSchedulingThreadPool - Thread priority is no longer supported for thread pool, ignoring
+2019-12-09 12:55:45,999 version:(null) [1] INFO Quartz.Util.DBConnectionManager - Registering datasource 'default' with db provider: 'Quartz.Impl.AdoJobStore.Common.DbProvider'
+2019-12-09 12:55:46,007 version:(null) [1] INFO Quartz.Impl.StdSchedulerFactory - Using object serializer: Quartz.Simpl.BinaryObjectSerializer, Quartz
+2019-12-09 12:55:46,047 version:(null) [1] INFO Quartz.Core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-12-09 12:55:46,055 version:(null) [1] INFO Quartz.Core.QuartzScheduler - Quartz Scheduler v.3.0.7.0 created.
+2019-12-09 12:55:46,070 version:(null) [1] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2019-12-09 12:55:46,075 version:(null) [1] INFO Quartz.Impl.AdoJobStore.JobStoreTX - JobStoreTX initialized.
+2019-12-09 12:55:46,115 version:(null) [1] INFO Quartz.Simpl.RemotingSchedulerExporter - Remoting is allowing remote calls
+2019-12-09 12:55:46,116 version:(null) [1] INFO Quartz.Simpl.RemotingSchedulerExporter - Registering remoting channel of type 'System.Runtime.Remoting.Channels.Tcp.TcpChannel' to port (555) with name (httpQuartz)
+2019-12-09 12:55:46,118 version:(null) [1] INFO Quartz.Simpl.RemotingSchedulerExporter - Remoting channel registered successfully
+2019-12-09 12:55:46,120 version:(null) [1] INFO Quartz.Simpl.RemotingSchedulerExporter - Successfully marshalled remotable scheduler under name 'QuartzScheduler'
+2019-12-09 12:55:46,126 version:(null) [1] INFO Quartz.Core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'DEV-BR-9WYLM32-QuartzService' with instanceId 'DEV-BR-9WYLM32-QuartzService'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - access via remote invocation.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 5 threads.
+  Using job-store 'Quartz.Impl.AdoJobStore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2019-12-09 12:55:46,130 version:(null) [1] INFO Quartz.Impl.StdSchedulerFactory - Quartz scheduler 'DEV-BR-9WYLM32-QuartzService' initialized
+2019-12-09 12:55:46,132 version:(null) [1] INFO Quartz.Impl.StdSchedulerFactory - Quartz scheduler version: 3.0.7.0
+2019-12-09 12:55:46,305 version:(null) [5] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2019-12-09 12:55:46,323 version:(null) [5] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2019-12-09 12:55:46,325 version:(null) [5] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Recovery complete.
+2019-12-09 12:55:46,330 version:(null) [9] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Removed 0 'complete' triggers.
+2019-12-09 12:55:46,335 version:(null) [8] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Removed 0 stale fired job entries.
+2019-12-09 12:55:46,797 version:(null) [8] INFO Quartz.Core.QuartzScheduler - Scheduler DEV-BR-9WYLM32-QuartzService_$_DEV-BR-9WYLM32-QuartzService started.
+2019-12-09 12:55:55,974 version:(null) [4] INFO QuartzServiceLib.QuartzWrapper - Starting Quartz Scheduler
+2019-12-09 12:55:56,059 version:(null) [4] WARN Quartz.Simpl.TaskSchedulingThreadPool - Thread priority is no longer supported for thread pool, ignoring
+2019-12-09 12:55:56,081 version:(null) [4] INFO Quartz.Util.DBConnectionManager - Registering datasource 'default' with db provider: 'Quartz.Impl.AdoJobStore.Common.DbProvider'
+2019-12-09 12:55:56,086 version:(null) [4] INFO Quartz.Impl.StdSchedulerFactory - Using object serializer: Quartz.Simpl.BinaryObjectSerializer, Quartz
+2019-12-09 12:55:56,105 version:(null) [4] INFO Quartz.Core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-12-09 12:55:56,109 version:(null) [4] INFO Quartz.Core.QuartzScheduler - Quartz Scheduler v.3.0.7.0 created.
+2019-12-09 12:55:56,119 version:(null) [4] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2019-12-09 12:55:56,122 version:(null) [4] INFO Quartz.Impl.AdoJobStore.JobStoreTX - JobStoreTX initialized.
+2019-12-09 12:55:56,138 version:(null) [4] INFO Quartz.Core.QuartzScheduler - Scheduler DEV-BR-9WYLM32-QuartzService_$_DEV-BR-9WYLM32-QuartzService shutting down.
+2019-12-09 12:55:56,141 version:(null) [4] INFO Quartz.Core.QuartzScheduler - Scheduler DEV-BR-9WYLM32-QuartzService_$_DEV-BR-9WYLM32-QuartzService paused.
+2019-12-09 12:55:56,151 version:(null) [4] ERROR Quartz.Impl.StdSchedulerFactory - Got another exception while shutting down after instantiation exception
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Quartzmin.SelfHost.QuartzminPlugin.Shutdown(CancellationToken cancellationToken)
+   at Quartz.Core.QuartzScheduler.<ShutdownPlugins>d__172.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Quartz.Core.QuartzScheduler.<Shutdown>d__80.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Quartz.Impl.StdSchedulerFactory.<ShutdownFromInstantiateException>d__66.MoveNext()
+2019-12-09 12:55:56,158 version:(null) [4] ERROR QuartzServiceLib.QuartzProgram`1 - Quartz.SchedulerException: Unable to bind scheduler to remoting. ---> System.Net.Sockets.SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at System.Net.Sockets.TcpListener.Start(Int32 backlog)
+   at System.Runtime.Remoting.Channels.ExclusiveTcpListener.Start(Boolean exclusiveAddressUse)
+   at System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.StartListening(Object data)
+   at System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.SetupChannel()
+   at System.Runtime.Remoting.Channels.Tcp.TcpServerChannel..ctor(IDictionary properties, IServerChannelSinkProvider sinkProvider, IAuthorizeRemotingConnection authorizeCallback)
+   at System.Runtime.Remoting.Channels.Tcp.TcpChannel..ctor(IDictionary properties, IClientChannelSinkProvider clientSinkProvider, IServerChannelSinkProvider serverSinkProvider)
+   at Quartz.Simpl.RemotingSchedulerExporter.RegisterRemotingChannelIfNeeded()
+   at Quartz.Simpl.RemotingSchedulerExporter.Bind(IRemotableQuartzScheduler scheduler)
+   at Quartz.Core.QuartzScheduler.Bind()
+   at Quartz.Core.QuartzScheduler.Initialize()
+   --- End of inner exception stack trace ---
+   at Quartz.Core.QuartzScheduler.Initialize()
+   at Quartz.Impl.StdSchedulerFactory.<Instantiate>d__65.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Quartz.Impl.StdSchedulerFactory.<Instantiate>d__65.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Quartz.Impl.StdSchedulerFactory.<GetScheduler>d__69.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at QuartzServiceLib.QuartzWrapper.get_Scheduler() in C:\Users\briese\Source\Workspaces\Shared\QuartzServiceLib\QuartzWrapper.cs:line 24
+   at QuartzServiceLib.QuartzWrapper.StartQuartz() in C:\Users\briese\Source\Workspaces\Shared\QuartzServiceLib\QuartzWrapper.cs:line 50
+   at QuartzServiceLib.QuartzProgram`1.Start(String[] args) in C:\Users\briese\Source\Workspaces\Shared\QuartzServiceLib\QuartzProgram.cs:line 236 [See nested exception: System.Net.Sockets.SocketException (0x80004005): Only one usage of each socket address (protocol/network address/port) is normally permitted
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at System.Net.Sockets.TcpListener.Start(Int32 backlog)
+   at System.Runtime.Remoting.Channels.ExclusiveTcpListener.Start(Boolean exclusiveAddressUse)
+   at System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.StartListening(Object data)
+   at System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.SetupChannel()
+   at System.Runtime.Remoting.Channels.Tcp.TcpServerChannel..ctor(IDictionary properties, IServerChannelSinkProvider sinkProvider, IAuthorizeRemotingConnection authorizeCallback)
+   at System.Runtime.Remoting.Channels.Tcp.TcpChannel..ctor(IDictionary properties, IClientChannelSinkProvider clientSinkProvider, IServerChannelSinkProvider serverSinkProvider)
+   at Quartz.Simpl.RemotingSchedulerExporter.RegisterRemotingChannelIfNeeded()
+   at Quartz.Simpl.RemotingSchedulerExporter.Bind(IRemotableQuartzScheduler scheduler)
+   at Quartz.Core.QuartzScheduler.Bind()
+   at Quartz.Core.QuartzScheduler.Initialize()]
+2019-12-09 12:56:11,786 version:(null) [4] INFO QuartzServiceLib.QuartzWrapper - Starting Quartz Scheduler
+2019-12-09 12:56:11,946 version:(null) [4] WARN Quartz.Simpl.TaskSchedulingThreadPool - Thread priority is no longer supported for thread pool, ignoring
+2019-12-09 12:56:11,987 version:(null) [4] INFO Quartz.Util.DBConnectionManager - Registering datasource 'default' with db provider: 'Quartz.Impl.AdoJobStore.Common.DbProvider'
+2019-12-09 12:56:11,994 version:(null) [4] INFO Quartz.Impl.StdSchedulerFactory - Using object serializer: Quartz.Simpl.BinaryObjectSerializer, Quartz
+2019-12-09 12:56:12,019 version:(null) [4] INFO Quartz.Core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-12-09 12:56:12,027 version:(null) [4] INFO Quartz.Core.QuartzScheduler - Quartz Scheduler v.3.0.7.0 created.
+2019-12-09 12:56:12,041 version:(null) [4] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2019-12-09 12:56:12,047 version:(null) [4] INFO Quartz.Impl.AdoJobStore.JobStoreTX - JobStoreTX initialized.
+2019-12-09 12:56:12,063 version:(null) [4] INFO Quartz.Simpl.RemotingSchedulerExporter - Remoting is allowing remote calls
+2019-12-09 12:56:12,065 version:(null) [4] INFO Quartz.Simpl.RemotingSchedulerExporter - Registering remoting channel of type 'System.Runtime.Remoting.Channels.Tcp.TcpChannel' to port (555) with name (httpQuartz)
+2019-12-09 12:56:12,067 version:(null) [4] INFO Quartz.Simpl.RemotingSchedulerExporter - Remoting channel registered successfully
+2019-12-09 12:56:12,070 version:(null) [4] INFO Quartz.Simpl.RemotingSchedulerExporter - Successfully marshalled remotable scheduler under name 'QuartzScheduler'
+2019-12-09 12:56:12,089 version:(null) [4] INFO Quartz.Core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'DEV-BR-9WYLM32-QuartzService' with instanceId 'DEV-BR-9WYLM32-QuartzService'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - access via remote invocation.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 5 threads.
+  Using job-store 'Quartz.Impl.AdoJobStore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2019-12-09 12:56:12,091 version:(null) [4] INFO Quartz.Impl.StdSchedulerFactory - Quartz scheduler 'DEV-BR-9WYLM32-QuartzService' initialized
+2019-12-09 12:56:12,103 version:(null) [4] INFO Quartz.Impl.StdSchedulerFactory - Quartz scheduler version: 3.0.7.0
+2019-12-09 12:56:12,238 version:(null) [11] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2019-12-09 12:56:12,255 version:(null) [7] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2019-12-09 12:56:12,256 version:(null) [7] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Recovery complete.
+2019-12-09 12:56:12,262 version:(null) [11] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Removed 0 'complete' triggers.
+2019-12-09 12:56:12,267 version:(null) [4] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Removed 0 stale fired job entries.
+2019-12-09 12:56:12,718 version:(null) [4] INFO Quartz.Core.QuartzScheduler - Scheduler DEV-BR-9WYLM32-QuartzService_$_DEV-BR-9WYLM32-QuartzService started.
+2019-12-09 13:00:10,362 version:(null) [20] INFO QuartzServiceLib.QuartzWrapper - Stopping Quartz Scheduler, waiting for 0 jobs to stop
+2019-12-09 13:00:10,366 version:(null) [20] INFO Quartz.Core.QuartzScheduler - Scheduler DEV-BR-9WYLM32-QuartzService_$_DEV-BR-9WYLM32-QuartzService shutting down.
+2019-12-09 13:00:10,372 version:(null) [20] INFO Quartz.Core.QuartzScheduler - Scheduler DEV-BR-9WYLM32-QuartzService_$_DEV-BR-9WYLM32-QuartzService paused.
+2019-12-09 13:00:10,375 version:(null) [20] INFO QuartzServiceLib.QuartzWrapper - Scheduler Stopped
+2019-12-09 13:00:10,377 version:(null) [19] INFO Quartz.Simpl.RemotingSchedulerExporter - Successfully disconnected remotable scheduler
+2019-12-09 13:00:10,385 version:(null) [19] INFO Quartz.Core.QuartzScheduler - Scheduler DEV-BR-9WYLM32-QuartzService_$_DEV-BR-9WYLM32-QuartzService Shutdown complete.
+2019-12-09 13:50:46,867 version:(null) [4] INFO QuartzServiceLib.QuartzWrapper - Starting Quartz Scheduler
+2019-12-09 13:50:46,958 version:(null) [4] WARN Quartz.Simpl.TaskSchedulingThreadPool - Thread priority is no longer supported for thread pool, ignoring
+2019-12-09 13:50:47,066 version:(null) [4] INFO Quartz.Util.DBConnectionManager - Registering datasource 'default' with db provider: 'Quartz.Impl.AdoJobStore.Common.DbProvider'
+2019-12-09 13:50:47,071 version:(null) [4] INFO Quartz.Impl.StdSchedulerFactory - Using object serializer: Quartz.Simpl.BinaryObjectSerializer, Quartz
+2019-12-09 13:50:47,089 version:(null) [4] INFO Quartz.Core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-12-09 13:50:47,094 version:(null) [4] INFO Quartz.Core.QuartzScheduler - Quartz Scheduler v.3.0.7.0 created.
+2019-12-09 13:50:47,103 version:(null) [4] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2019-12-09 13:50:47,105 version:(null) [4] INFO Quartz.Impl.AdoJobStore.JobStoreTX - JobStoreTX initialized.
+2019-12-09 13:50:47,117 version:(null) [4] INFO Quartz.Simpl.RemotingSchedulerExporter - Remoting is allowing remote calls
+2019-12-09 13:50:47,118 version:(null) [4] INFO Quartz.Simpl.RemotingSchedulerExporter - Registering remoting channel of type 'System.Runtime.Remoting.Channels.Tcp.TcpChannel' to port (555) with name (httpQuartz)
+2019-12-09 13:50:47,119 version:(null) [4] INFO Quartz.Simpl.RemotingSchedulerExporter - Remoting channel registered successfully
+2019-12-09 13:50:47,120 version:(null) [4] INFO Quartz.Simpl.RemotingSchedulerExporter - Successfully marshalled remotable scheduler under name 'QuartzScheduler'
+2019-12-09 13:50:47,122 version:(null) [4] INFO Quartz.Core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'DEV-BR-9WYLM32-QuartzService' with instanceId 'DEV-BR-9WYLM32-QuartzService'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - access via remote invocation.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 5 threads.
+  Using job-store 'Quartz.Impl.AdoJobStore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2019-12-09 13:50:47,123 version:(null) [4] INFO Quartz.Impl.StdSchedulerFactory - Quartz scheduler 'DEV-BR-9WYLM32-QuartzService' initialized
+2019-12-09 13:50:47,124 version:(null) [4] INFO Quartz.Impl.StdSchedulerFactory - Quartz scheduler version: 3.0.7.0
+2019-12-09 13:50:47,219 version:(null) [7] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2019-12-09 13:50:47,236 version:(null) [11] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2019-12-09 13:50:47,237 version:(null) [11] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Recovery complete.
+2019-12-09 13:50:47,241 version:(null) [4] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Removed 0 'complete' triggers.
+2019-12-09 13:50:47,246 version:(null) [7] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Removed 0 stale fired job entries.
+2019-12-09 13:50:47,449 version:(null) [7] INFO Quartz.Core.QuartzScheduler - Scheduler DEV-BR-9WYLM32-QuartzService_$_DEV-BR-9WYLM32-QuartzService started.
+2019-12-09 14:19:57,303 version:(null) [74] INFO QuartzServiceLib.QuartzWrapper - Stopping Quartz Scheduler, waiting for 0 jobs to stop
+2019-12-09 14:19:57,307 version:(null) [74] INFO Quartz.Core.QuartzScheduler - Scheduler DEV-BR-9WYLM32-QuartzService_$_DEV-BR-9WYLM32-QuartzService shutting down.
+2019-12-09 14:19:57,309 version:(null) [74] INFO Quartz.Core.QuartzScheduler - Scheduler DEV-BR-9WYLM32-QuartzService_$_DEV-BR-9WYLM32-QuartzService paused.
+2019-12-09 14:19:57,316 version:(null) [74] INFO QuartzServiceLib.QuartzWrapper - Scheduler Stopped
+2019-12-09 14:19:57,320 version:(null) [73] INFO Quartz.Simpl.RemotingSchedulerExporter - Successfully disconnected remotable scheduler
+2019-12-09 14:19:57,327 version:(null) [73] INFO Quartz.Core.QuartzScheduler - Scheduler DEV-BR-9WYLM32-QuartzService_$_DEV-BR-9WYLM32-QuartzService Shutdown complete.
+2019-12-09 14:20:33,577 version:(null) [4] INFO QuartzServiceLib.QuartzWrapper - Starting Quartz Scheduler
+2019-12-09 14:20:33,661 version:(null) [4] WARN Quartz.Simpl.TaskSchedulingThreadPool - Thread priority is no longer supported for thread pool, ignoring
+2019-12-09 14:20:33,683 version:(null) [4] INFO Quartz.Util.DBConnectionManager - Registering datasource 'default' with db provider: 'Quartz.Impl.AdoJobStore.Common.DbProvider'
+2019-12-09 14:20:33,687 version:(null) [4] INFO Quartz.Impl.StdSchedulerFactory - Using object serializer: Quartz.Simpl.BinaryObjectSerializer, Quartz
+2019-12-09 14:20:33,706 version:(null) [4] INFO Quartz.Core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-12-09 14:20:33,710 version:(null) [4] INFO Quartz.Core.QuartzScheduler - Quartz Scheduler v.3.0.7.0 created.
+2019-12-09 14:20:33,718 version:(null) [4] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2019-12-09 14:20:33,720 version:(null) [4] INFO Quartz.Impl.AdoJobStore.JobStoreTX - JobStoreTX initialized.
+2019-12-09 14:20:33,731 version:(null) [4] INFO Quartz.Simpl.RemotingSchedulerExporter - Remoting is allowing remote calls
+2019-12-09 14:20:33,733 version:(null) [4] INFO Quartz.Simpl.RemotingSchedulerExporter - Registering remoting channel of type 'System.Runtime.Remoting.Channels.Tcp.TcpChannel' to port (555) with name (httpQuartz)
+2019-12-09 14:20:33,734 version:(null) [4] INFO Quartz.Simpl.RemotingSchedulerExporter - Remoting channel registered successfully
+2019-12-09 14:20:33,735 version:(null) [4] INFO Quartz.Simpl.RemotingSchedulerExporter - Successfully marshalled remotable scheduler under name 'QuartzScheduler'
+2019-12-09 14:20:33,738 version:(null) [4] INFO Quartz.Core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'DEV-BR-9WYLM32-QuartzService' with instanceId 'DEV-BR-9WYLM32-QuartzService'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - access via remote invocation.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 5 threads.
+  Using job-store 'Quartz.Impl.AdoJobStore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2019-12-09 14:20:33,739 version:(null) [4] INFO Quartz.Impl.StdSchedulerFactory - Quartz scheduler 'DEV-BR-9WYLM32-QuartzService' initialized
+2019-12-09 14:20:33,739 version:(null) [4] INFO Quartz.Impl.StdSchedulerFactory - Quartz scheduler version: 3.0.7.0
+2019-12-09 14:20:33,814 version:(null) [4] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2019-12-09 14:20:33,830 version:(null) [7] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2019-12-09 14:20:33,831 version:(null) [7] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Recovery complete.
+2019-12-09 14:20:33,835 version:(null) [11] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Removed 0 'complete' triggers.
+2019-12-09 14:20:33,838 version:(null) [4] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Removed 0 stale fired job entries.
+2019-12-09 14:20:34,032 version:(null) [4] INFO Quartz.Core.QuartzScheduler - Scheduler DEV-BR-9WYLM32-QuartzService_$_DEV-BR-9WYLM32-QuartzService started.
+2019-12-09 14:25:45,817 version:(null) [35] INFO QuartzServiceLib.QuartzWrapper - Stopping Quartz Scheduler, waiting for 0 jobs to stop
+2019-12-09 14:25:45,824 version:(null) [35] INFO Quartz.Core.QuartzScheduler - Scheduler DEV-BR-9WYLM32-QuartzService_$_DEV-BR-9WYLM32-QuartzService shutting down.
+2019-12-09 14:25:45,830 version:(null) [35] INFO Quartz.Core.QuartzScheduler - Scheduler DEV-BR-9WYLM32-QuartzService_$_DEV-BR-9WYLM32-QuartzService paused.
+2019-12-09 14:25:45,834 version:(null) [35] INFO QuartzServiceLib.QuartzWrapper - Scheduler Stopped
+2019-12-09 14:25:45,837 version:(null) [32] INFO Quartz.Simpl.RemotingSchedulerExporter - Successfully disconnected remotable scheduler
+2019-12-09 14:25:45,847 version:(null) [32] INFO Quartz.Core.QuartzScheduler - Scheduler DEV-BR-9WYLM32-QuartzService_$_DEV-BR-9WYLM32-QuartzService Shutdown complete.
+2019-12-09 14:26:28,180 version:(null) [4] INFO QuartzServiceLib.QuartzWrapper - Starting Quartz Scheduler
+2019-12-09 14:26:28,290 version:(null) [4] WARN Quartz.Simpl.TaskSchedulingThreadPool - Thread priority is no longer supported for thread pool, ignoring
+2019-12-09 14:26:28,340 version:(null) [4] INFO Quartz.Util.DBConnectionManager - Registering datasource 'default' with db provider: 'Quartz.Impl.AdoJobStore.Common.DbProvider'
+2019-12-09 14:26:28,472 version:(null) [4] INFO Quartz.Impl.StdSchedulerFactory - Using object serializer: Quartz.Simpl.BinaryObjectSerializer, Quartz
+2019-12-09 14:26:28,500 version:(null) [4] INFO Quartz.Core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2019-12-09 14:26:28,506 version:(null) [4] INFO Quartz.Core.QuartzScheduler - Quartz Scheduler v.3.0.7.0 created.
+2019-12-09 14:26:28,519 version:(null) [4] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2019-12-09 14:26:28,526 version:(null) [4] INFO Quartz.Impl.AdoJobStore.JobStoreTX - JobStoreTX initialized.
+2019-12-09 14:26:28,544 version:(null) [4] INFO Quartz.Simpl.RemotingSchedulerExporter - Remoting is allowing remote calls
+2019-12-09 14:26:28,545 version:(null) [4] INFO Quartz.Simpl.RemotingSchedulerExporter - Registering remoting channel of type 'System.Runtime.Remoting.Channels.Tcp.TcpChannel' to port (555) with name (httpQuartz)
+2019-12-09 14:26:28,547 version:(null) [4] INFO Quartz.Simpl.RemotingSchedulerExporter - Remoting channel registered successfully
+2019-12-09 14:26:28,548 version:(null) [4] INFO Quartz.Simpl.RemotingSchedulerExporter - Successfully marshalled remotable scheduler under name 'QuartzScheduler'
+2019-12-09 14:26:28,552 version:(null) [4] INFO Quartz.Core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'DEV-BR-9WYLM32-QuartzService' with instanceId 'DEV-BR-9WYLM32-QuartzService'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - access via remote invocation.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 5 threads.
+  Using job-store 'Quartz.Impl.AdoJobStore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2019-12-09 14:26:28,554 version:(null) [4] INFO Quartz.Impl.StdSchedulerFactory - Quartz scheduler 'DEV-BR-9WYLM32-QuartzService' initialized
+2019-12-09 14:26:28,555 version:(null) [4] INFO Quartz.Impl.StdSchedulerFactory - Quartz scheduler version: 3.0.7.0
+2019-12-09 14:26:28,671 version:(null) [7] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2019-12-09 14:26:28,690 version:(null) [7] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2019-12-09 14:26:28,692 version:(null) [7] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Recovery complete.
+2019-12-09 14:26:28,697 version:(null) [4] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Removed 0 'complete' triggers.
+2019-12-09 14:26:28,701 version:(null) [7] INFO Quartz.Impl.AdoJobStore.JobStoreTX - Removed 0 stale fired job entries.
+2019-12-09 14:26:28,993 version:(null) [7] INFO Quartz.Core.QuartzScheduler - Scheduler DEV-BR-9WYLM32-QuartzService_$_DEV-BR-9WYLM32-QuartzService started.
+2019-12-09 15:23:57,283 version:(null) [157] INFO QuartzServiceLib.QuartzWrapper - Stopping Quartz Scheduler, waiting for 0 jobs to stop
+2019-12-09 15:23:57,288 version:(null) [157] INFO Quartz.Core.QuartzScheduler - Scheduler DEV-BR-9WYLM32-QuartzService_$_DEV-BR-9WYLM32-QuartzService shutting down.
+2019-12-09 15:23:57,294 version:(null) [157] INFO Quartz.Core.QuartzScheduler - Scheduler DEV-BR-9WYLM32-QuartzService_$_DEV-BR-9WYLM32-QuartzService paused.
+2019-12-09 15:23:57,299 version:(null) [157] INFO QuartzServiceLib.QuartzWrapper - Scheduler Stopped
+2019-12-09 15:23:57,302 version:(null) [153] INFO Quartz.Simpl.RemotingSchedulerExporter - Successfully disconnected remotable scheduler
+2019-12-09 15:23:57,311 version:(null) [153] INFO Quartz.Core.QuartzScheduler - Scheduler DEV-BR-9WYLM32-QuartzService_$_DEV-BR-9WYLM32-QuartzService Shutdown complete.

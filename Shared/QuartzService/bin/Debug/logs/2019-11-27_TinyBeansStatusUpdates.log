@@ -1,0 +1,191 @@
+2019-11-27 09:09:55,609 version:(null) [15] INFO QuartzService.Program - Starting TinyBeansFromCSVProcessor
+2019-11-27 09:14:41,513 version:(null) [15] INFO QuartzService.Program - Starting TinyBeansFromCSVProcessor
+2019-11-27 09:16:31,784 version:(null) [15] INFO QuartzService.Program - Starting TinyBeansFromCSVProcessor
+2019-11-27 09:16:31,844 version:(null) [15] ERROR QuartzService.Program - System.Configuration.ConfigurationErrorsException: An error occurred creating the configuration section handler for CSVFileUpdateSection: Could not load file or assembly 'TinybeansStatusUpdates' or one of its dependencies. An argument was out of its legal range. (Exception from HRESULT: 0x80131502) (C:\Users\briese\Source\Workspaces\TinybeansStatusUpdates\TinybeansStatusUpdates\bin\Debug\TinybeansStatusUpdates.exe.config line 5) ---> System.IO.FileLoadException: Could not load file or assembly 'TinybeansStatusUpdates' or one of its dependencies. An argument was out of its legal range. (Exception from HRESULT: 0x80131502) ---> System.ArgumentOutOfRangeException: Length cannot be less than zero.
+Parameter name: length
+   at System.String.Substring(Int32 startIndex, Int32 length)
+   at AppUtilityLib.AppUtility.MyResolveEventHandler(Object sender, ResolveEventArgs args) in C:\Users\briese\Source\Workspaces\Shared\AppUtilityLib\AppUtilityLib\AppUtility.cs:line 44
+   at System.AppDomain.OnAssemblyResolveEvent(RuntimeAssembly assembly, String assemblyFullName)
+   --- End of inner exception stack trace ---
+   at System.Configuration.TypeUtil.GetTypeWithReflectionPermission(IInternalConfigHost host, String typeString, Boolean throwOnError)
+   at System.Configuration.MgmtConfigurationRecord.CreateSectionFactory(FactoryRecord factoryRecord)
+   at System.Configuration.BaseConfigurationRecord.FindAndEnsureFactoryRecord(String configKey, Boolean& isRootDeclaredHere)
+   --- End of inner exception stack trace ---
+   at System.Configuration.BaseConfigurationRecord.FindAndEnsureFactoryRecord(String configKey, Boolean& isRootDeclaredHere)
+   at System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.ConfigurationSectionCollection.Get(String name)
+   at System.Configuration.ConfigurationSectionCollection.get_Item(String name)
+   at TinybeansStatusUpdates.TinyBeansFromCSVProcessor.GetCSVUpdaters() in C:\Users\briese\Source\Workspaces\TinybeansStatusUpdates\TinybeansStatusUpdates\TinyBeansFromCSVProcessor.cs:line 37
+   at TinybeansStatusUpdates.CSVFileUpdateProcessor`1.Process() in C:\Users\briese\Source\Workspaces\TinybeansStatusUpdates\TinybeansStatusUpdates\CSVFileUpdateProcessor.cs:line 185
+2019-11-27 09:16:31,864 version:(null) [15] INFO QuartzService.Program - TinyBeansFromCSVProcessor completed with 1 Errors
+2019-11-27 09:16:31,866 version:(null) [15] INFO QuartzService.Program - SendEmail To: briese@mom365.com Subject: Error(s) Processing TinyBeansFromCSVProcessor Message: TinyBeansFromCSVProcessor completed with 1 Errors FilePaths: 
+2019-11-27 09:16:31,913 version:(null) [15] INFO QuartzService.Program - Completed Calling TinybeansStatusUpdates.TinyBeansFromCSVProcessor
+2019-11-27 09:16:31,998 version:(null) [9] DEBUG Quartz.Core.JobRunShell - Trigger instruction : DeleteTrigger
+2019-11-27 09:16:32,009 version:(null) [9] DEBUG Quartz.Impl.AdoJobStore.SimpleSemaphore - Lock 'TRIGGER_ACCESS' is desired by: 6207977e-3bb5-45c0-ac58-33f21f1978f0
+2019-11-27 09:16:32,011 version:(null) [9] DEBUG Quartz.Impl.AdoJobStore.SimpleSemaphore - Lock 'TRIGGER_ACCESS' is being obtained: 6207977e-3bb5-45c0-ac58-33f21f1978f0
+2019-11-27 09:16:32,012 version:(null) [9] DEBUG Quartz.Impl.AdoJobStore.SimpleSemaphore - Lock 'TRIGGER_ACCESS' given to: 6207977e-3bb5-45c0-ac58-33f21f1978f0
+2019-11-27 09:16:32,020 version:(null) [9] DEBUG Quartz.SQL - Prepared SQL: SELECT TRIGGER_STATE, NEXT_FIRE_TIME, JOB_NAME, JOB_GROUP FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND TRIGGER_NAME = @triggerName AND TRIGGER_GROUP = @triggerGroup
+2019-11-27 09:16:32,026 version:(null) [4] DEBUG Quartz.SQL - Prepared SQL: DELETE FROM QRTZ_SIMPLE_TRIGGERS WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND TRIGGER_NAME = @triggerName AND TRIGGER_GROUP = @triggerGroup
+2019-11-27 09:16:32,029 version:(null) [9] DEBUG Quartz.SQL - Prepared SQL: DELETE FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND TRIGGER_NAME = @triggerName AND TRIGGER_GROUP = @triggerGroup
+2019-11-27 09:16:32,039 version:(null) [4] DEBUG Quartz.SQL - Prepared SQL: DELETE FROM QRTZ_FIRED_TRIGGERS WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND ENTRY_ID = @triggerEntryId
+2019-11-27 09:16:32,044 version:(null) [9] DEBUG Quartz.Impl.AdoJobStore.SimpleSemaphore - Lock 'TRIGGER_ACCESS' returned by: 6207977e-3bb5-45c0-ac58-33f21f1978f0
+2019-11-27 09:44:42,247 version:(null) [15] INFO QuartzService.Program - Starting TinyBeansFromCSVProcessor
+2019-11-27 09:45:09,960 version:(null) [15] INFO QuartzService.Program - Starting TinyBeansFromCSVProcessor
+2019-11-27 09:45:33,653 version:(null) [9] DEBUG Quartz.SQL - Prepared SQL: SELECT TRIGGER_NAME, TRIGGER_GROUP, NEXT_FIRE_TIME, PRIORITY FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND TRIGGER_STATE = @state AND NEXT_FIRE_TIME <= @noLaterThan AND (MISFIRE_INSTR = -1 OR (MISFIRE_INSTR <> -1 AND NEXT_FIRE_TIME >= @noEarlierThan)) ORDER BY NEXT_FIRE_TIME ASC, PRIORITY DESC
+2019-11-27 09:45:36,061 version:(null) [14] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2019-11-27 09:46:13,950 version:(null) [14] DEBUG Quartz.SQL - Prepared SQL: SELECT TRIGGER_NAME, TRIGGER_GROUP, NEXT_FIRE_TIME, PRIORITY FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND TRIGGER_STATE = @state AND NEXT_FIRE_TIME <= @noLaterThan AND (MISFIRE_INSTR = -1 OR (MISFIRE_INSTR <> -1 AND NEXT_FIRE_TIME >= @noEarlierThan)) ORDER BY NEXT_FIRE_TIME ASC, PRIORITY DESC
+2019-11-27 09:46:13,965 version:(null) [16] DEBUG Quartz.Impl.AdoJobStore.MisfireHandler - Scanning for misfires...
+2019-11-27 09:46:13,973 version:(null) [15] ERROR QuartzService.Program - System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppUtilityLib.AppUtility.CreateInstanceOfAssemblyType(String AssemblyPath, String TypeName, Object[] Parameters) in C:\Users\briese\Source\Workspaces\Shared\AppUtilityLib\AppUtilityLib\AppUtility.cs:line 210
+   at AppUtilityLib.AppUtility.CreateInstanceOfAssemblyType(String AssemblyPath, String TypeName) in C:\Users\briese\Source\Workspaces\Shared\AppUtilityLib\AppUtilityLib\AppUtility.cs:line 150
+   at TinybeansStatusUpdates.TinyBeansFromCSVProcessor.GetCSVUpdaters() in C:\Users\briese\Source\Workspaces\TinybeansStatusUpdates\TinybeansStatusUpdates\TinyBeansFromCSVProcessor.cs:line 38
+   at TinybeansStatusUpdates.CSVFileUpdateProcessor`1.Process() in C:\Users\briese\Source\Workspaces\TinybeansStatusUpdates\TinybeansStatusUpdates\CSVFileUpdateProcessor.cs:line 185
+2019-11-27 09:46:13,974 version:(null) [14] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2019-11-27 09:46:13,979 version:(null) [16] DEBUG Quartz.SQL - Prepared SQL: SELECT COUNT(TRIGGER_NAME) FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND MISFIRE_INSTR <> -1 AND NEXT_FIRE_TIME < @nextFireTime AND TRIGGER_STATE = @state1
+2019-11-27 09:46:13,985 version:(null) [15] INFO QuartzService.Program - TinyBeansFromCSVProcessor completed with 1 Errors
+2019-11-27 09:46:13,987 version:(null) [17] DEBUG Quartz.Impl.AdoJobStore.JobStoreTX - Found 0 triggers that missed their scheduled fire-time.
+2019-11-27 09:46:13,990 version:(null) [15] INFO QuartzService.Program - SendEmail To: briese@mom365.com Subject: Error(s) Processing TinyBeansFromCSVProcessor Message: TinyBeansFromCSVProcessor completed with 1 Errors FilePaths: 
+2019-11-27 09:46:14,031 version:(null) [15] INFO QuartzService.Program - Completed Calling TinybeansStatusUpdates.TinyBeansFromCSVProcessor
+2019-11-27 09:46:14,089 version:(null) [17] DEBUG Quartz.Core.JobRunShell - Trigger instruction : DeleteTrigger
+2019-11-27 09:46:14,098 version:(null) [17] DEBUG Quartz.Impl.AdoJobStore.SimpleSemaphore - Lock 'TRIGGER_ACCESS' is desired by: a2da9287-99b1-420a-aa0d-f682314b89a8
+2019-11-27 09:46:14,099 version:(null) [17] DEBUG Quartz.Impl.AdoJobStore.SimpleSemaphore - Lock 'TRIGGER_ACCESS' is being obtained: a2da9287-99b1-420a-aa0d-f682314b89a8
+2019-11-27 09:46:14,100 version:(null) [17] DEBUG Quartz.Impl.AdoJobStore.SimpleSemaphore - Lock 'TRIGGER_ACCESS' given to: a2da9287-99b1-420a-aa0d-f682314b89a8
+2019-11-27 09:46:14,109 version:(null) [17] DEBUG Quartz.SQL - Prepared SQL: SELECT TRIGGER_STATE, NEXT_FIRE_TIME, JOB_NAME, JOB_GROUP FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND TRIGGER_NAME = @triggerName AND TRIGGER_GROUP = @triggerGroup
+2019-11-27 09:46:14,112 version:(null) [16] DEBUG Quartz.SQL - Prepared SQL: DELETE FROM QRTZ_SIMPLE_TRIGGERS WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND TRIGGER_NAME = @triggerName AND TRIGGER_GROUP = @triggerGroup
+2019-11-27 09:46:14,118 version:(null) [8] DEBUG Quartz.SQL - Prepared SQL: DELETE FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND TRIGGER_NAME = @triggerName AND TRIGGER_GROUP = @triggerGroup
+2019-11-27 09:46:14,122 version:(null) [17] DEBUG Quartz.SQL - Prepared SQL: DELETE FROM QRTZ_FIRED_TRIGGERS WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND ENTRY_ID = @triggerEntryId
+2019-11-27 09:46:14,126 version:(null) [17] DEBUG Quartz.Impl.AdoJobStore.SimpleSemaphore - Lock 'TRIGGER_ACCESS' returned by: a2da9287-99b1-420a-aa0d-f682314b89a8
+2019-11-27 09:46:20,071 version:(null) [12] DEBUG Quartz.Impl.AdoJobStore.SimpleSemaphore - Lock 'TRIGGER_ACCESS' is desired by: 8bdf9caf-34ce-4af0-a1f5-49e8fecb8c4f
+2019-11-27 09:46:20,073 version:(null) [12] DEBUG Quartz.Impl.AdoJobStore.SimpleSemaphore - Lock 'TRIGGER_ACCESS' is being obtained: 8bdf9caf-34ce-4af0-a1f5-49e8fecb8c4f
+2019-11-27 09:46:20,074 version:(null) [12] DEBUG Quartz.Impl.AdoJobStore.SimpleSemaphore - Lock 'TRIGGER_ACCESS' given to: 8bdf9caf-34ce-4af0-a1f5-49e8fecb8c4f
+2019-11-27 09:46:20,077 version:(null) [12] DEBUG Quartz.SQL - Prepared SQL: SELECT TRIGGER_NAME FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND TRIGGER_NAME = @triggerName AND TRIGGER_GROUP = @triggerGroup
+2019-11-27 09:46:20,080 version:(null) [8] DEBUG Quartz.SQL - Prepared SQL: SELECT TRIGGER_GROUP FROM QRTZ_PAUSED_TRIGGER_GRPS WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND TRIGGER_GROUP = @triggerGroup
+2019-11-27 09:46:20,085 version:(null) [16] DEBUG Quartz.SQL - Prepared SQL: SELECT TRIGGER_GROUP FROM QRTZ_PAUSED_TRIGGER_GRPS WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND TRIGGER_GROUP = @triggerGroup
+2019-11-27 09:46:20,089 version:(null) [16] DEBUG Quartz.SQL - Prepared SQL: SELECT JOB_NAME,JOB_GROUP,DESCRIPTION,JOB_CLASS_NAME,IS_DURABLE,REQUESTS_RECOVERY,JOB_DATA FROM QRTZ_JOB_DETAILS WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND JOB_NAME = @jobName AND JOB_GROUP = @jobGroup
+2019-11-27 09:46:20,098 version:(null) [17] DEBUG Quartz.SQL - Prepared SQL: INSERT INTO QRTZ_TRIGGERS (SCHED_NAME, TRIGGER_NAME, TRIGGER_GROUP, JOB_NAME, JOB_GROUP, DESCRIPTION, NEXT_FIRE_TIME, PREV_FIRE_TIME, TRIGGER_STATE, TRIGGER_TYPE, START_TIME, END_TIME, CALENDAR_NAME, MISFIRE_INSTR, JOB_DATA, PRIORITY)  
+                        VALUES('DEV-BR-9WYLM32-QuartzService', @triggerName, @triggerGroup, @triggerJobName, @triggerJobGroup, @triggerDescription, @triggerNextFireTime, @triggerPreviousFireTime, @triggerState, @triggerType, @triggerStartTime, @triggerEndTime, @triggerCalendarName, @triggerMisfireInstruction, @triggerJobJobDataMap, @triggerPriority)
+2019-11-27 09:46:20,107 version:(null) [16] DEBUG Quartz.SQL - Prepared SQL: INSERT INTO QRTZ_SIMPLE_TRIGGERS (SCHED_NAME, TRIGGER_NAME, TRIGGER_GROUP, REPEAT_COUNT, REPEAT_INTERVAL, TIMES_TRIGGERED)  VALUES('DEV-BR-9WYLM32-QuartzService', @triggerName, @triggerGroup, @triggerRepeatCount, @triggerRepeatInterval, @triggerTimesTriggered)
+2019-11-27 09:46:20,114 version:(null) [16] DEBUG Quartz.Impl.AdoJobStore.SimpleSemaphore - Lock 'TRIGGER_ACCESS' returned by: 8bdf9caf-34ce-4af0-a1f5-49e8fecb8c4f
+2019-11-27 09:46:20,122 version:(null) [14] DEBUG Quartz.SQL - Prepared SQL: SELECT TRIGGER_NAME, TRIGGER_GROUP, NEXT_FIRE_TIME, PRIORITY FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND TRIGGER_STATE = @state AND NEXT_FIRE_TIME <= @noLaterThan AND (MISFIRE_INSTR = -1 OR (MISFIRE_INSTR <> -1 AND NEXT_FIRE_TIME >= @noEarlierThan)) ORDER BY NEXT_FIRE_TIME ASC, PRIORITY DESC
+2019-11-27 09:46:20,129 version:(null) [8] DEBUG Quartz.SQL - Prepared SQL: SELECT JOB_NAME,JOB_GROUP,DESCRIPTION,NEXT_FIRE_TIME,PREV_FIRE_TIME,TRIGGER_TYPE,START_TIME,END_TIME,CALENDAR_NAME,MISFIRE_INSTR,PRIORITY,JOB_DATA FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND TRIGGER_NAME = @triggerName AND TRIGGER_GROUP = @triggerGroup
+2019-11-27 09:46:20,134 version:(null) [17] DEBUG Quartz.SQL - Prepared SQL: SELECT * FROM QRTZ_SIMPLE_TRIGGERS WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND TRIGGER_NAME = @triggerName AND TRIGGER_GROUP = @triggerGroup
+2019-11-27 09:46:20,138 version:(null) [14] DEBUG Quartz.SQL - Prepared SQL: SELECT JOB_NAME,JOB_GROUP,DESCRIPTION,JOB_CLASS_NAME,IS_DURABLE,REQUESTS_RECOVERY,JOB_DATA FROM QRTZ_JOB_DETAILS WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND JOB_NAME = @jobName AND JOB_GROUP = @jobGroup
+2019-11-27 09:46:20,149 version:(null) [14] DEBUG Quartz.SQL - Prepared SQL: UPDATE QRTZ_TRIGGERS SET TRIGGER_STATE = @newState WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND TRIGGER_NAME = @triggerName AND TRIGGER_GROUP = @triggerGroup AND TRIGGER_STATE = @oldState AND NEXT_FIRE_TIME = @nextFireTime
+2019-11-27 09:46:20,157 version:(null) [16] DEBUG Quartz.SQL - Prepared SQL: INSERT INTO QRTZ_FIRED_TRIGGERS (SCHED_NAME, ENTRY_ID, TRIGGER_NAME, TRIGGER_GROUP, INSTANCE_NAME, FIRED_TIME, SCHED_TIME, STATE, JOB_NAME, JOB_GROUP, IS_NONCONCURRENT, REQUESTS_RECOVERY, PRIORITY) VALUES('DEV-BR-9WYLM32-QuartzService', @triggerEntryId, @triggerName, @triggerGroup, @triggerInstanceName, @triggerFireTime, @triggerScheduledTime, @triggerState, @triggerJobName, @triggerJobGroup, @triggerJobStateful, @triggerJobRequestsRecovery, @triggerPriority)
+2019-11-27 09:46:20,170 version:(null) [16] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 1 triggers
+2019-11-27 09:46:20,172 version:(null) [16] DEBUG Quartz.Impl.AdoJobStore.SimpleSemaphore - Lock 'TRIGGER_ACCESS' is desired by: de3983ca-5a86-4994-b6fc-5232e337cad1
+2019-11-27 09:46:20,177 version:(null) [16] DEBUG Quartz.Impl.AdoJobStore.SimpleSemaphore - Lock 'TRIGGER_ACCESS' is being obtained: de3983ca-5a86-4994-b6fc-5232e337cad1
+2019-11-27 09:46:20,187 version:(null) [16] DEBUG Quartz.Impl.AdoJobStore.SimpleSemaphore - Lock 'TRIGGER_ACCESS' given to: de3983ca-5a86-4994-b6fc-5232e337cad1
+2019-11-27 09:46:20,190 version:(null) [16] DEBUG Quartz.SQL - Prepared SQL: SELECT TRIGGER_STATE FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND TRIGGER_NAME = @triggerName AND TRIGGER_GROUP = @triggerGroup
+2019-11-27 09:46:20,197 version:(null) [16] DEBUG Quartz.SQL - Prepared SQL: SELECT JOB_NAME,JOB_GROUP,DESCRIPTION,JOB_CLASS_NAME,IS_DURABLE,REQUESTS_RECOVERY,JOB_DATA FROM QRTZ_JOB_DETAILS WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND JOB_NAME = @jobName AND JOB_GROUP = @jobGroup
+2019-11-27 09:46:20,203 version:(null) [16] DEBUG Quartz.SQL - Prepared SQL: UPDATE QRTZ_FIRED_TRIGGERS SET INSTANCE_NAME = @instanceName, FIRED_TIME = @firedTime, SCHED_TIME = @scheduledTime, STATE = @entryState, JOB_NAME = @jobName, JOB_GROUP = @jobGroup, IS_NONCONCURRENT = @isNonConcurrent, REQUESTS_RECOVERY = @requestsRecover WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND ENTRY_ID = @entryId
+2019-11-27 09:46:20,207 version:(null) [17] DEBUG Quartz.SQL - Prepared SQL: SELECT TRIGGER_NAME FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND TRIGGER_NAME = @triggerName AND TRIGGER_GROUP = @triggerGroup
+2019-11-27 09:46:20,211 version:(null) [17] DEBUG Quartz.SQL - Prepared SQL: UPDATE QRTZ_TRIGGERS SET JOB_NAME = @triggerJobName, JOB_GROUP = @triggerJobGroup, DESCRIPTION = @triggerDescription, NEXT_FIRE_TIME = @triggerNextFireTime, PREV_FIRE_TIME = @triggerPreviousFireTime, 
+                        TRIGGER_STATE = @triggerState, TRIGGER_TYPE = @triggerType, START_TIME = @triggerStartTime, END_TIME = @triggerEndTime, CALENDAR_NAME = @triggerCalendarName, MISFIRE_INSTR = @triggerMisfireInstruction, PRIORITY = @triggerPriority
+                    WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND TRIGGER_NAME = @triggerName AND TRIGGER_GROUP = @triggerGroup
+2019-11-27 09:46:20,218 version:(null) [17] DEBUG Quartz.SQL - Prepared SQL: UPDATE QRTZ_SIMPLE_TRIGGERS SET REPEAT_COUNT = @triggerRepeatCount, REPEAT_INTERVAL = @triggerRepeatInterval, TIMES_TRIGGERED = @triggerTimesTriggered WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND TRIGGER_NAME = @triggerName AND TRIGGER_GROUP = @triggerGroup
+2019-11-27 09:46:20,224 version:(null) [8] DEBUG Quartz.Impl.AdoJobStore.SimpleSemaphore - Lock 'TRIGGER_ACCESS' returned by: de3983ca-5a86-4994-b6fc-5232e337cad1
+2019-11-27 09:46:21,137 version:(null) [8] DEBUG Quartz.Simpl.SimpleJobFactory - Producing instance of Job 'DEFAULT.TinyBeansFromCSVProcessor', class=QuartzServiceLib.ReflectionJob
+2019-11-27 09:46:21,143 version:(null) [8] DEBUG Quartz.SQL - Prepared SQL: SELECT TRIGGER_NAME, TRIGGER_GROUP, NEXT_FIRE_TIME, PRIORITY FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND TRIGGER_STATE = @state AND NEXT_FIRE_TIME <= @noLaterThan AND (MISFIRE_INSTR = -1 OR (MISFIRE_INSTR <> -1 AND NEXT_FIRE_TIME >= @noEarlierThan)) ORDER BY NEXT_FIRE_TIME ASC, PRIORITY DESC
+2019-11-27 09:46:21,148 version:(null) [23] INFO QuartzService.Program - Calling TinybeansStatusUpdates.TinyBeansFromCSVProcessor
+2019-11-27 09:46:21,152 version:(null) [14] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2019-11-27 09:46:36,413 version:(null) [23] INFO QuartzService.Program - Starting TinyBeansFromCSVProcessor
+2019-11-27 09:47:31,928 version:(null) [15] INFO QuartzService.Program - Starting TinyBeansFromCSVProcessor
+2019-11-27 09:53:25,027 version:(null) [15] INFO QuartzService.Program - Starting TinyBeansFromCSVProcessor
+2019-11-27 09:55:27,796 version:(null) [15] INFO QuartzService.Program - Starting TinyBeansFromCSVProcessor
+2019-11-27 09:55:28,403 version:(null) [15] ERROR QuartzService.Program - System.ArgumentException: Illegal characters in path.
+   at System.IO.Path.LegacyNormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.Path.NormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.Path.GetFullPathInternal(String path)
+   at System.Configuration.Configuration.SaveAsImpl(String filename, ConfigurationSaveMode saveMode, Boolean forceSaveAll)
+   at System.Configuration.Configuration.SaveAs(String filename, ConfigurationSaveMode saveMode, Boolean forceSaveAll)
+   at System.Configuration.Configuration.SaveAs(String filename)
+   at TinybeansStatusUpdates.TinyBeansFromCSVProcessor.GetCSVUpdaters() in C:\Users\briese\Source\Workspaces\TinybeansStatusUpdates\TinybeansStatusUpdates\TinyBeansFromCSVProcessor.cs:line 39
+   at TinybeansStatusUpdates.CSVFileUpdateProcessor`1.Process() in C:\Users\briese\Source\Workspaces\TinybeansStatusUpdates\TinybeansStatusUpdates\CSVFileUpdateProcessor.cs:line 185
+2019-11-27 09:55:28,415 version:(null) [15] INFO QuartzService.Program - TinyBeansFromCSVProcessor completed with 1 Errors
+2019-11-27 09:55:28,418 version:(null) [15] INFO QuartzService.Program - SendEmail To: briese@mom365.com Subject: Error(s) Processing TinyBeansFromCSVProcessor Message: TinyBeansFromCSVProcessor completed with 1 Errors FilePaths: 
+2019-11-27 09:55:28,462 version:(null) [15] INFO QuartzService.Program - Completed Calling TinybeansStatusUpdates.TinyBeansFromCSVProcessor
+2019-11-27 09:55:28,528 version:(null) [5] DEBUG Quartz.Core.JobRunShell - Trigger instruction : DeleteTrigger
+2019-11-27 09:55:28,539 version:(null) [5] DEBUG Quartz.Impl.AdoJobStore.SimpleSemaphore - Lock 'TRIGGER_ACCESS' is desired by: 9dce65a7-de73-44de-9e1d-a0dcbffd911d
+2019-11-27 09:55:28,540 version:(null) [5] DEBUG Quartz.Impl.AdoJobStore.SimpleSemaphore - Lock 'TRIGGER_ACCESS' is being obtained: 9dce65a7-de73-44de-9e1d-a0dcbffd911d
+2019-11-27 09:55:28,542 version:(null) [5] DEBUG Quartz.Impl.AdoJobStore.SimpleSemaphore - Lock 'TRIGGER_ACCESS' given to: 9dce65a7-de73-44de-9e1d-a0dcbffd911d
+2019-11-27 09:55:28,551 version:(null) [5] DEBUG Quartz.SQL - Prepared SQL: SELECT TRIGGER_STATE, NEXT_FIRE_TIME, JOB_NAME, JOB_GROUP FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND TRIGGER_NAME = @triggerName AND TRIGGER_GROUP = @triggerGroup
+2019-11-27 09:55:28,554 version:(null) [4] DEBUG Quartz.SQL - Prepared SQL: DELETE FROM QRTZ_SIMPLE_TRIGGERS WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND TRIGGER_NAME = @triggerName AND TRIGGER_GROUP = @triggerGroup
+2019-11-27 09:55:28,557 version:(null) [12] DEBUG Quartz.SQL - Prepared SQL: DELETE FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND TRIGGER_NAME = @triggerName AND TRIGGER_GROUP = @triggerGroup
+2019-11-27 09:55:28,561 version:(null) [12] DEBUG Quartz.SQL - Prepared SQL: DELETE FROM QRTZ_FIRED_TRIGGERS WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND ENTRY_ID = @triggerEntryId
+2019-11-27 09:55:28,565 version:(null) [5] DEBUG Quartz.Impl.AdoJobStore.SimpleSemaphore - Lock 'TRIGGER_ACCESS' returned by: 9dce65a7-de73-44de-9e1d-a0dcbffd911d
+2019-11-27 09:56:13,531 version:(null) [15] INFO QuartzService.Program - Starting TinyBeansFromCSVProcessor
+2019-11-27 09:57:28,408 version:(null) [16] DEBUG Quartz.Impl.AdoJobStore.MisfireHandler - Scanning for misfires...
+2019-11-27 09:57:28,409 version:(null) [5] DEBUG Quartz.SQL - Prepared SQL: SELECT TRIGGER_NAME, TRIGGER_GROUP, NEXT_FIRE_TIME, PRIORITY FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND TRIGGER_STATE = @state AND NEXT_FIRE_TIME <= @noLaterThan AND (MISFIRE_INSTR = -1 OR (MISFIRE_INSTR <> -1 AND NEXT_FIRE_TIME >= @noEarlierThan)) ORDER BY NEXT_FIRE_TIME ASC, PRIORITY DESC
+2019-11-27 09:57:28,443 version:(null) [5] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2019-11-27 09:57:28,444 version:(null) [16] DEBUG Quartz.SQL - Prepared SQL: SELECT COUNT(TRIGGER_NAME) FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND MISFIRE_INSTR <> -1 AND NEXT_FIRE_TIME < @nextFireTime AND TRIGGER_STATE = @state1
+2019-11-27 09:57:28,450 version:(null) [14] DEBUG Quartz.Impl.AdoJobStore.JobStoreTX - Found 0 triggers that missed their scheduled fire-time.
+2019-11-27 09:59:38,720 version:(null) [15] INFO QuartzService.Program - Starting TinyBeansFromCSVProcessor
+2019-11-27 09:59:39,397 version:(null) [15] ERROR QuartzService.Program - System.Configuration.ConfigurationErrorsException: An error occurred creating the configuration section handler for CSVFileUpdateSection: Could not load file or assembly 'TinybeansStatusUpdates' or one of its dependencies. An argument was out of its legal range. (Exception from HRESULT: 0x80131502) (C:\Users\briese\Source\Workspaces\TinybeansStatusUpdates\TinybeansStatusUpdates\bin\Debug\TinybeansStatusUpdates.exe.config) ---> System.IO.FileLoadException: Could not load file or assembly 'TinybeansStatusUpdates' or one of its dependencies. An argument was out of its legal range. (Exception from HRESULT: 0x80131502) ---> System.ArgumentOutOfRangeException: Length cannot be less than zero.
+Parameter name: length
+   at System.String.Substring(Int32 startIndex, Int32 length)
+   at AppUtilityLib.AppUtility.MyResolveEventHandler(Object sender, ResolveEventArgs args) in C:\Users\briese\Source\Workspaces\Shared\AppUtilityLib\AppUtilityLib\AppUtility.cs:line 44
+   at System.AppDomain.OnAssemblyResolveEvent(RuntimeAssembly assembly, String assemblyFullName)
+   --- End of inner exception stack trace ---
+   at System.Configuration.TypeUtil.GetTypeWithReflectionPermission(IInternalConfigHost host, String typeString, Boolean throwOnError)
+   at System.Configuration.MgmtConfigurationRecord.CreateSectionFactory(FactoryRecord factoryRecord)
+   at System.Configuration.BaseConfigurationRecord.FindAndEnsureFactoryRecord(String configKey, Boolean& isRootDeclaredHere)
+   --- End of inner exception stack trace ---
+   at System.Configuration.BaseConfigurationRecord.FindAndEnsureFactoryRecord(String configKey, Boolean& isRootDeclaredHere)
+   at System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   at System.Configuration.ConfigurationSectionCollection.Get(String name)
+   at System.Configuration.ConfigurationSectionCollection.get_Item(String name)
+   at TinybeansStatusUpdates.TinyBeansFromCSVProcessor.GetCSVUpdaters() in C:\Users\briese\Source\Workspaces\TinybeansStatusUpdates\TinybeansStatusUpdates\TinyBeansFromCSVProcessor.cs:line 40
+   at TinybeansStatusUpdates.CSVFileUpdateProcessor`1.Process() in C:\Users\briese\Source\Workspaces\TinybeansStatusUpdates\TinybeansStatusUpdates\CSVFileUpdateProcessor.cs:line 185
+2019-11-27 09:59:39,416 version:(null) [15] INFO QuartzService.Program - TinyBeansFromCSVProcessor completed with 1 Errors
+2019-11-27 09:59:39,419 version:(null) [15] INFO QuartzService.Program - SendEmail To: briese@mom365.com Subject: Error(s) Processing TinyBeansFromCSVProcessor Message: TinyBeansFromCSVProcessor completed with 1 Errors FilePaths: 
+2019-11-27 09:59:39,456 version:(null) [15] INFO QuartzService.Program - Completed Calling TinybeansStatusUpdates.TinyBeansFromCSVProcessor
+2019-11-27 09:59:39,512 version:(null) [12] DEBUG Quartz.Core.JobRunShell - Trigger instruction : DeleteTrigger
+2019-11-27 09:59:39,520 version:(null) [12] DEBUG Quartz.Impl.AdoJobStore.SimpleSemaphore - Lock 'TRIGGER_ACCESS' is desired by: caede706-011e-4e72-9c3a-2724a3456e6c
+2019-11-27 09:59:39,522 version:(null) [12] DEBUG Quartz.Impl.AdoJobStore.SimpleSemaphore - Lock 'TRIGGER_ACCESS' is being obtained: caede706-011e-4e72-9c3a-2724a3456e6c
+2019-11-27 09:59:39,523 version:(null) [12] DEBUG Quartz.Impl.AdoJobStore.SimpleSemaphore - Lock 'TRIGGER_ACCESS' given to: caede706-011e-4e72-9c3a-2724a3456e6c
+2019-11-27 09:59:39,531 version:(null) [12] DEBUG Quartz.SQL - Prepared SQL: SELECT TRIGGER_STATE, NEXT_FIRE_TIME, JOB_NAME, JOB_GROUP FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND TRIGGER_NAME = @triggerName AND TRIGGER_GROUP = @triggerGroup
+2019-11-27 09:59:39,534 version:(null) [4] DEBUG Quartz.SQL - Prepared SQL: DELETE FROM QRTZ_SIMPLE_TRIGGERS WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND TRIGGER_NAME = @triggerName AND TRIGGER_GROUP = @triggerGroup
+2019-11-27 09:59:39,536 version:(null) [9] DEBUG Quartz.SQL - Prepared SQL: DELETE FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND TRIGGER_NAME = @triggerName AND TRIGGER_GROUP = @triggerGroup
+2019-11-27 09:59:39,540 version:(null) [12] DEBUG Quartz.SQL - Prepared SQL: DELETE FROM QRTZ_FIRED_TRIGGERS WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND ENTRY_ID = @triggerEntryId
+2019-11-27 09:59:39,543 version:(null) [4] DEBUG Quartz.Impl.AdoJobStore.SimpleSemaphore - Lock 'TRIGGER_ACCESS' returned by: caede706-011e-4e72-9c3a-2724a3456e6c
+2019-11-27 10:00:27,702 version:(null) [15] INFO QuartzService.Program - Starting TinyBeansFromCSVProcessor
+2019-11-27 10:10:05,764 version:(null) [15] INFO QuartzService.Program - Starting TinyBeansFromCSVProcessor
+2019-11-27 10:31:18,429 version:(null) [15] INFO QuartzService.Program - Starting TinyBeansFromCSVProcessor
+2019-11-27 10:32:18,122 version:(null) [15] INFO QuartzService.Program - Starting TinyBeansFromCSVProcessor
+2019-11-27 10:34:24,482 version:(null) [15] INFO QuartzService.Program - Starting TinyBeansFromCSVProcessor
+2019-11-27 10:35:20,351 version:(null) [15] INFO QuartzService.Program - Starting TinyBeansFromCSVProcessor
+2019-11-27 10:36:40,258 version:(null) [15] INFO QuartzService.Program - Starting TinyBeansFromCSVProcessor
+2019-11-27 10:38:12,772 version:(null) [15] INFO QuartzService.Program - Starting TinyBeansFromCSVProcessor
+2019-11-27 10:38:29,861 version:(null) [15] ERROR QuartzService.Program - System.ArgumentException: Object of type 'System.String' cannot be converted to type 'TinybeansStatusUpdates.CSVFileUpdateType'.
+   at System.RuntimeType.TryChangeType(Object value, Binder binder, CultureInfo culture, Boolean needsSpecialCast)
+   at System.RuntimeType.CheckValue(Object value, Binder binder, CultureInfo culture, BindingFlags invokeAttr)
+   at System.Reflection.MethodBase.CheckArguments(Object[] parameters, Binder binder, BindingFlags invokeAttr, CultureInfo culture, Signature sig)
+   at System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.SetValue(Object obj, Object value, Object[] index)
+   at System.Reflection.PropertyInfo.SetValue(Object obj, Object value)
+   at TinybeansStatusUpdates.TinyBeansFromCSVProcessor.GetCSVUpdaters() in C:\Users\briese\Source\Workspaces\TinybeansStatusUpdates\TinybeansStatusUpdates\TinyBeansFromCSVProcessor.cs:line 58
+2019-11-27 10:38:35,006 version:(null) [11] DEBUG Quartz.SQL - Prepared SQL: SELECT TRIGGER_NAME, TRIGGER_GROUP, NEXT_FIRE_TIME, PRIORITY FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND TRIGGER_STATE = @state AND NEXT_FIRE_TIME <= @noLaterThan AND (MISFIRE_INSTR = -1 OR (MISFIRE_INSTR <> -1 AND NEXT_FIRE_TIME >= @noEarlierThan)) ORDER BY NEXT_FIRE_TIME ASC, PRIORITY DESC
+2019-11-27 10:38:35,034 version:(null) [11] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2019-11-27 10:41:54,971 version:(null) [15] INFO QuartzService.Program - Starting TinyBeansFromCSVProcessor
+2019-11-27 10:54:12,767 version:(null) [15] INFO QuartzService.Program - Starting TinyBeansFromCSVProcessor
+2019-11-27 10:55:02,006 version:(null) [15] INFO QuartzService.Program - Starting TinyBeansFromCSVProcessor
+2019-11-27 11:00:05,867 version:(null) [15] INFO QuartzService.Program - Starting TinyBeansFromCSVProcessor
+2019-11-27 11:00:33,500 version:(null) [9] DEBUG Quartz.SQL - Prepared SQL: SELECT TRIGGER_NAME, TRIGGER_GROUP, NEXT_FIRE_TIME, PRIORITY FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND TRIGGER_STATE = @state AND NEXT_FIRE_TIME <= @noLaterThan AND (MISFIRE_INSTR = -1 OR (MISFIRE_INSTR <> -1 AND NEXT_FIRE_TIME >= @noEarlierThan)) ORDER BY NEXT_FIRE_TIME ASC, PRIORITY DESC
+2019-11-27 11:00:40,307 version:(null) [14] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2019-11-27 11:01:01,243 version:(null) [16] DEBUG Quartz.Impl.AdoJobStore.MisfireHandler - Scanning for misfires...
+2019-11-27 11:01:01,790 version:(null) [16] DEBUG Quartz.SQL - Prepared SQL: SELECT COUNT(TRIGGER_NAME) FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND MISFIRE_INSTR <> -1 AND NEXT_FIRE_TIME < @nextFireTime AND TRIGGER_STATE = @state1
+2019-11-27 11:01:02,026 version:(null) [16] DEBUG Quartz.Impl.AdoJobStore.JobStoreTX - Found 0 triggers that missed their scheduled fire-time.
+2019-11-27 11:01:04,683 version:(null) [14] DEBUG Quartz.SQL - Prepared SQL: SELECT TRIGGER_NAME, TRIGGER_GROUP, NEXT_FIRE_TIME, PRIORITY FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND TRIGGER_STATE = @state AND NEXT_FIRE_TIME <= @noLaterThan AND (MISFIRE_INSTR = -1 OR (MISFIRE_INSTR <> -1 AND NEXT_FIRE_TIME >= @noEarlierThan)) ORDER BY NEXT_FIRE_TIME ASC, PRIORITY DESC
+2019-11-27 11:11:08,792 version:(null) [15] INFO QuartzService.Program - Starting TinyBeansFromCSVProcessor
+2019-11-27 11:11:58,221 version:(null) [15] INFO QuartzService.Program - Starting TinyBeansFromCSVProcessor
+2019-11-27 11:12:34,177 version:(null) [4] DEBUG Quartz.SQL - Prepared SQL: SELECT TRIGGER_NAME, TRIGGER_GROUP, NEXT_FIRE_TIME, PRIORITY FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND TRIGGER_STATE = @state AND NEXT_FIRE_TIME <= @noLaterThan AND (MISFIRE_INSTR = -1 OR (MISFIRE_INSTR <> -1 AND NEXT_FIRE_TIME >= @noEarlierThan)) ORDER BY NEXT_FIRE_TIME ASC, PRIORITY DESC
+2019-11-27 11:12:34,622 version:(null) [16] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2019-11-27 11:12:53,451 version:(null) [4] DEBUG Quartz.Impl.AdoJobStore.MisfireHandler - Scanning for misfires...
+2019-11-27 11:12:53,886 version:(null) [4] DEBUG Quartz.SQL - Prepared SQL: SELECT COUNT(TRIGGER_NAME) FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'DEV-BR-9WYLM32-QuartzService' AND MISFIRE_INSTR <> -1 AND NEXT_FIRE_TIME < @nextFireTime AND TRIGGER_STATE = @state1
+2019-11-27 11:12:55,157 version:(null) [4] DEBUG Quartz.Impl.AdoJobStore.JobStoreTX - Found 0 triggers that missed their scheduled fire-time.
+2019-11-27 11:13:50,238 version:(null) [15] INFO QuartzService.Program - Starting TinyBeansFromCSVProcessor
+2019-11-27 11:20:03,185 version:(null) [15] INFO QuartzService.Program - Starting TinyBeansFromCSVProcessor
+2019-11-27 11:21:06,880 version:(null) [15] INFO QuartzService.Program - Starting TinyBeansToCSVProcessor

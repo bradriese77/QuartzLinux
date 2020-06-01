@@ -1,0 +1,99 @@
+2019-12-10 08:02:35,467 version:(null) [18] INFO QuartzService.Program - df -k
+
+2019-12-10 08:02:35,468 version:(null) [18] INFO QuartzService.Program - /dbc2                  (/dev/vg01/dbc2        ) :  2011199 total allocated Kb
+                                                   1289582 free allocated Kb
+                                                    721617 used allocated Kb
+                                                        35 % allocation used
+/dsk                   (/dev/vg01/dsk         ) :  2364898 total allocated Kb
+                                                   1391269 free allocated Kb
+                                                    973629 used allocated Kb
+                                                        41 % allocation used
+/dta                   (/dev/vg01/newdta      ) :  7991665 total allocated Kb
+                                                   3017137 free allocated Kb
+                                                   4974528 used allocated Kb
+                                                        62 % allocation used
+/dta2                  (/dev/vg01/dta2        ) :  4019189 total allocated Kb
+                                                   1153053 free allocated Kb
+                                                   2866136 used allocated Kb
+                                                        71 % allocation used
+/dtat                  (/dev/vg01/dtat        ) :  1993354 total allocated Kb
+                                                   1557386 free allocated Kb
+                                                    435968 used allocated Kb
+                                                        21 % allocation used
+/dtb                   (/dev/vg01/dtb         ) :  2895067 total allocated Kb
+                                                    811063 free allocated Kb
+                                                   2084004 used allocated Kb
+                                                        71 % allocation used
+/home                  (/dev/vg00/lvol4       ) :    39443 total allocated Kb
+                                                     25038 free allocated Kb
+                                                     14405 used allocated Kb
+                                                        36 % allocation used
+/law                   (/dev/vg01/law         ) :  3038591 total allocated Kb
+                                                    870083 free allocated Kb
+                                                   2168508 used allocated Kb
+                                                        71 % allocation used
+/mea                   (/dev/vg01/mea         ) :  1004376 total allocated Kb
+                                                    540984 free allocated Kb
+                                                    463392 used allocated Kb
+                                                        46 % allocation used
+/mkdb1                 (/dev/vg01/mkdb1       ) :  5610061 total allocated Kb
+                                                   1866003 free allocated Kb
+                                                   3744058 used allocated Kb
+                                                        66 % allocation used
+/mkdb2                 (/dev/vg01/mkdb2       ) :  1812781 total allocated Kb
+                                                   1808039 free allocated Kb
+                                                      4742 used allocated Kb
+                                                         0 % allocation used
+/mkdbca                (/dev/vg01/mkdbca      ) :  4777250 total allocated Kb
+                                                   2069751 free allocated Kb
+                                                   2707499 used allocated Kb
+                                                        56 % allocation used
+/mls0                  (/dev/vg01/mls0        ) :  3568432 total allocated Kb
+                                                   1771746 free allocated Kb
+                                                   1796686 used allocated Kb
+                                                        50 % allocation used
+/olddtat               (/dev/vg01/olddtat     ) :   615364 total allocated Kb
+                                                    600651 free allocated Kb
+                                                     14713 used allocated Kb
+                                                         2 % allocation used
+/oldsys                (/dev/vg01/oldsys      ) :   393007 total allocated Kb
+                                                    249136 free allocated Kb
+                                                    143871 used allocated Kb
+                                                        36 % allocation used
+/opt                   (/dev/vg00/lvol5       ) :   601116 total allocated Kb
+                                                    199782 free allocated Kb
+                                                    401334 used allocated Kb
+                                                        66 % allocation used
+/osa                   (/dev/vg01/osa         ) :  4703398 total allocated Kb
+                                                   3177360 free allocated Kb
+                                                   1526038 used allocated Kb
+                                                        32 % allocation used
+/sys                   (/dev/vg01/sys         ) :  1748889 total allocated Kb
+                                                   1292230 free allocated Kb
+                                                    456659 used allocated Kb
+                                                        26 % allocation used
+/tmp                   (/dev/vg00/lvol7       ) :    38611 total allocated Kb
+                                                     37358 free allocated Kb
+                                                      1253 used allocated Kb
+                                                         3 % allocation used
+/usr                   (/dev/vg00/lvol10      ) :   602688 total allocated Kb
+                                                    176632 free allocated Kb
+                                                    426056 used allocated Kb
+                                                        70 % allocation used
+/var                   (/dev/vg00/lvol11      ) :   792150 total allocated Kb
+                                                    452438 free allocated Kb
+                                                    339712 used allocated Kb
+                                                        42 % allocation used
+/stand                 (/dev/vg00/lvol1       ) :    46617 total allocated Kb
+                                                     17391 free allocated Kb
+                                                     29226 used allocated Kb
+                                                        62 % allocation used
+/                      (/dev/vg00/lvol3       ) :    48761 total allocated Kb
+                                                      5984 free allocated Kb
+                                                     42777 used allocated Kb
+                                                        87 % allocation used
+# 
+2019-12-10 08:03:26,132 version:(null) [18] INFO QuartzService.Program - Completed Calling Hasco1Utility.CheckSpaceJob
+2019-12-10 18:00:00,738 version:(null) [169] INFO QuartzService.Program - getting /dta/CAM/archive/archive_2.tar.gz to archive_2.tar.gz
+2019-12-10 19:01:13,687 version:(null) [169] INFO QuartzService.Program - Download of /dta/CAM/archive/archive_2.tar.gz succeeded
+2019-12-10 19:01:13,788 version:(null) [169] INFO QuartzService.Program - Completed Calling Hasco1Utility.BackupFilesJob

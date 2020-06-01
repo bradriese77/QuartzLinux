@@ -1,0 +1,141 @@
+﻿
+    <div id="DivQuartz">
+        <table width="100%">
+            <tr>
+                <td>
+                    <iframe id="IframeQuartz" src="~/CrystalQuartzPanel.axd" onmouseover="setupQuartzPanelIframe();" scrolling="yes" frameborder="0" marginheight="0" marginwidth="0" width="100%" height="100%" style="min-height:800px;  min-width:800px;  "></iframe>
+                </td>
+                @*<td valign="top" align="center">
+                    <button class="btn btn-warning modal-toggle" data-toggle="modal" data-target="#myModal" data-id="{{{ $item->id }}}">Add QuartzService Jobs</button>
+                </td>*@
+            </tr>
+        </table>
+    </div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <h4 class="modal-title" id="ModalLabel">Add Jobs</h4>
+
+
+            </div>
+            <div  class="modal-body" id="modal-body">
+
+
+                <select class="form-control dropdown-select" style="width:auto;min-width:400px"  data-style="btn-warning" id="ddJobTypes">
+                    <option>Select</option>
+                </select>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" id="buttonCloseAddJobType" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="buttonAddJobType">Add</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+    
+    function setupQuartzPanelIframe() {
+
+        var iframe = document.getElementById("IframeQuartz");
+        var iframeDoc = iframe.contentWindow.document;
+        var myFunction = function () {
+
+            var span = this.children[0];
+            span.setAttribute('data-toggle', 'tooltip');
+            span.setAttribute('data-placement', 'top');
+
+
+            var url = base_url + 'GetJobDisplayFolderPath/' + span.innerHTML;
+          
+            $.ajax({
+                type: "GET",
+                url: url,
+                dataType: 'json',
+                success: function (data) {
+
+                    span.setAttribute('title', data);
+                }
+            });
+
+
+        };
+        var names = iframeDoc.getElementsByClassName("js_viewDetails");
+        for (i = 0; i < names.length; ++i) {
+
+            names[i].addEventListener('mouseover', myFunction, false);
+        }
+
+    }
+
+    function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+    (function () {
+        var infoModal = $('#myModal');
+        $('.modal-toggle').on('click', function () {
+
+            var url = base_url + 'GetJobTypes/All';
+          
+            $.ajax({
+                type: "GET",
+                url:  url,
+                dataType: 'json',
+                success: function (data) {
+                    var jTargetSelect = jQuery("#ddJobTypes");
+                    jTargetSelect.children().remove();
+                    jQuery(data).each(function () {
+                        jTargetSelect.append('<option>' + this.Group + '/' + this.Name + '</option>');
+                    });
+                }
+            });
+
+        });
+
+        $('#buttonCloseAddJobType').on('click', function () {
+            location.reload();
+        });
+        $('#buttonAddJobType').on('click', function () {
+
+            var data = JSON.stringify({
+                Name: $('#ddJobTypes').val(),
+            });
+
+
+            //            $.ajax({
+            //    type: 'POST',
+            //    url: '/AddJobType',
+            //    data: JSON.parse(data)
+            //})
+            var url = base_url + '/AddJobDetailsFromAssemblyClass/';
+
+            $.ajax({
+                type: 'POST',
+                url:  url + $('#ddJobTypes').val(),
+            })
+                .done(function (data) {
+
+
+                    if (data.startsWith("Successfully")) {
+                        toastr["success"](JSON.stringify(data));
+                    }
+                    else {
+
+                        toastr["error"]("Failed to Add Quartz Job Type");
+                    }
+                }).fail(function (data) {
+
+                    toastr["error"]("Failed to Add Quartz Job Type");
+                });
+
+        });
+
+    })(jQuery);
+
+
+
+</script>

@@ -71,7 +71,7 @@ namespace AppUtilityLib
                 smtpFrom = value;
             }
         }
-        public void SendEmail(string[] Tos, string Subject, System.Net.Mail.AlternateView Message, string[] FilePaths)
+        public void SendEmail(string[] Tos, string Subject, System.Net.Mail.AlternateView Message, string[] FilePaths,string From=null)
         {
             Logger.Info(string.Format("SendEmail To: {0} Subject: {1} Message: {2}",string.Join(";", Tos),Subject,Message.ToString()));
             System.Net.Mail.MailMessage message = new System.Net.Mail.MailMessage();
@@ -81,8 +81,9 @@ namespace AppUtilityLib
                 message.To.Add(m);
             }
             message.Subject = Subject;
+            if(From==null)
             message.From = new System.Net.Mail.MailAddress(SmtpFrom);
-
+            else message.From = new System.Net.Mail.MailAddress(From);
             message.AlternateViews.Add(Message);
             foreach (string FilePath in FilePaths)
                 if (!string.IsNullOrEmpty(FilePath))

@@ -38,6 +38,9 @@
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\..\Reporting\ReportingUtilities\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\QuartzService\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="Quartz, Version=3.0.7.0, Culture=neutral, PublicKeyToken=f6b8c98a402cc8a4, processorArchitecture=MSIL">
       <HintPath>..\..\Reporting\ReportingUtilities\packages\Quartz.3.0.7\lib\net452\Quartz.dll</HintPath>
     </Reference>
@@ -52,6 +55,7 @@
       <HintPath>..\..\Reporting\ReportingUtilities\packages\System.Diagnostics.EventLog.4.6.0\lib\net461\System.Diagnostics.EventLog.dll</HintPath>
     </Reference>
     <Reference Include="System.Management" />
+    <Reference Include="System.Net" />
     <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -68,11 +72,9 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\QuartzAdmin\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EmailJob.cs" />
     <Compile Include="IPurgeRequest.cs" />
     <Compile Include="IQuartzServiceJob.cs" />
     <Compile Include="QuartzScheduler.cs" />
@@ -93,6 +95,7 @@
     <Compile Include="QuartzWrapper.cs" />
     <Compile Include="ReflectionJob.cs" />
     <Compile Include="StagingProcessorJob.cs" />
+    <Compile Include="QuartzServiceLibExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AppUtilityLib\AppUtilityLib\AppUtilityLib.csproj">

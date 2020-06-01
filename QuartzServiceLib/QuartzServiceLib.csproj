@@ -21,6 +21,6 @@
     <None Remove="QuartzServiceLib.csproj.vspscc" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\QuartzManager\AppUtilityLib\AppUtilityLib.csproj" />
+    <ProjectReference Include="..\Shared\AppUtilityLib\AppUtilityLib\AppUtilityLib.csproj" />
   </ItemGroup>
 </Project>

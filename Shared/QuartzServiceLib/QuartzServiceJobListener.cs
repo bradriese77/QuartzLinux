@@ -48,7 +48,12 @@ namespace QuartzServiceLib
                 history.TRIGGER_GROUP = context.Trigger.Key.Group;
                 history.TRIGGER_NAME = context.Trigger.Key.Name;
 
-             
+                using (MemoryStream memoryStream = new MemoryStream())
+                {
+                    BinaryFormatter binaryFormatter = new BinaryFormatter();
+                    binaryFormatter.Serialize(memoryStream, context.JobDetail.JobDataMap);
+                    history.JOB_DATA = memoryStream.ToArray();
+                }
                 IQuartzServiceJob job = (IQuartzServiceJob)context.JobInstance;
                 history.LOGFILE = job.GetLogFile();
                 db.QRTZ_JOB_HISTORY.InsertOnSubmit(history);

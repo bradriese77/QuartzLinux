@@ -1,0 +1,50 @@
+2019-12-12 07:00:00,018 version:(null) [120] INFO QuartzService.Program - Calling Hasco1Utility.CheckSpaceJob
+2019-12-12 11:10:00,050 version:(null) [81] INFO QuartzService.Program - Calling QuartzServiceLib.PurgeJob
+2019-12-12 11:10:00,839 version:(null) [81] INFO QuartzService.Program - Running LogFilePurge1 Purge
+2019-12-12 11:10:00,841 version:(null) [81] INFO QuartzService.Program - Purging Files *_PayrollReportingServiceUtility.log from C:\apps\PayrollReportingServiceUtility\logs\ DaysBack 14 Recurse False
+2019-12-12 11:10:00,844 version:(null) [81] INFO QuartzService.Program - Running LogFilePurge2 Purge
+2019-12-12 11:10:00,845 version:(null) [81] INFO QuartzService.Program - Purging Files *.log from C:\apps\QuartzService\logs\ DaysBack 14 Recurse False
+2019-12-12 11:10:00,847 version:(null) [81] INFO QuartzService.Program - Running TBToFileArchivePurge Purge
+2019-12-12 11:10:00,848 version:(null) [81] INFO QuartzService.Program - Purging Files TB_*.csv from \\scprdnas02\Development\Tinybeans\Archive DaysBack 30 Recurse False
+2019-12-12 11:10:01,100 version:(null) [81] INFO QuartzService.Program - Deleting \\scprdnas02\Development\Tinybeans\Archive\TB_BUYERANYPRODUCT_111219_041542.CSV
+2019-12-12 11:10:01,105 version:(null) [81] INFO QuartzService.Program - Successfully Deleted \\scprdnas02\Development\Tinybeans\Archive\TB_BUYERANYPRODUCT_111219_041542.CSV
+2019-12-12 11:10:01,157 version:(null) [81] INFO QuartzService.Program - Deleting \\scprdnas02\Development\Tinybeans\Archive\TB_BUYER_111219_040040.CSV
+2019-12-12 11:10:01,161 version:(null) [81] INFO QuartzService.Program - Successfully Deleted \\scprdnas02\Development\Tinybeans\Archive\TB_BUYER_111219_040040.CSV
+2019-12-12 11:10:01,216 version:(null) [81] INFO QuartzService.Program - Deleting \\scprdnas02\Development\Tinybeans\Archive\TB_NONBUYER_111219_043042.CSV
+2019-12-12 11:10:01,220 version:(null) [81] INFO QuartzService.Program - Successfully Deleted \\scprdnas02\Development\Tinybeans\Archive\TB_NONBUYER_111219_043042.CSV
+2019-12-12 11:10:01,276 version:(null) [81] INFO QuartzService.Program - Running LogFilePurge3 Purge
+2019-12-12 11:10:01,277 version:(null) [81] INFO QuartzService.Program - Purging Files *_TinyBeansStatusUpdates.log from C:\apps\TinybeansStatusUpdates\logs\ DaysBack 14 Recurse False
+2019-12-12 11:10:01,279 version:(null) [81] INFO QuartzService.Program - Running LogFilePurge4 Purge
+2019-12-12 11:10:01,280 version:(null) [81] INFO QuartzService.Program - Purging Files *.log from C:\apps\MissingCashUtility\logs\ DaysBack 14 Recurse False
+2019-12-12 11:10:01,285 version:(null) [154] ERROR QuartzService.Program - System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.AggregateException: One or more errors occurred. ---> System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\apps\PayrollReportingServiceUtility\logs'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.Directory.GetFiles(String path, String searchPattern)
+   at QuartzServiceLib.PurgeRequest.PurgeFiles(String Folder) in C:\Users\briese\Source\Workspaces\Shared\QuartzServiceLib\PurgeRequest.cs:line 50
+   at QuartzServiceLib.PurgeRequest.Purge() in C:\Users\briese\Source\Workspaces\Shared\QuartzServiceLib\PurgeRequest.cs:line 37
+   at QuartzServiceLib.PurgeJob.ExecuteJob(IJobExecutionContext context) in C:\Users\briese\Source\Workspaces\Shared\QuartzServiceLib\PurgeJob.cs:line 54
+   --- End of inner exception stack trace ---
+   at QuartzServiceLib.PurgeJob.ExecuteJob(IJobExecutionContext context) in C:\Users\briese\Source\Workspaces\Shared\QuartzServiceLib\PurgeJob.cs:line 62
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.RuntimeType.InvokeMember(String name, BindingFlags bindingFlags, Binder binder, Object target, Object[] providedArgs, ParameterModifier[] modifiers, CultureInfo culture, String[] namedParams)
+   at System.Type.InvokeMember(String name, BindingFlags invokeAttr, Binder binder, Object target, Object[] args)
+   at AppUtilityLib.AppUtility.CallMethod(Object obj, String MethodName, Object target, Object[] args) in C:\Users\briese\Source\Workspaces\Shared\AppUtilityLib\AppUtilityLib\AppUtility.cs:line 390
+   at AppUtilityLib.AppUtility.CallMethod(Object obj, String MethodName, Object target, Object arg) in C:\Users\briese\Source\Workspaces\Shared\AppUtilityLib\AppUtilityLib\AppUtility.cs:line 386
+   at QuartzServiceLib.ReflectionJob.ExecuteJob(IJobExecutionContext context) in C:\Users\briese\Source\Workspaces\Shared\QuartzServiceLib\ReflectionJob.cs:line 41
+   at QuartzServiceLib.QuartzServiceJob`1.<>c__DisplayClass32_0.<Execute>b__1() in C:\Users\briese\Source\Workspaces\Shared\QuartzServiceLib\QuartzServiceJob.cs:line 141
+   at QuartzServiceLib.QuartzServiceJob`1.<>c__DisplayClass34_0.<StartSTATask>b__0() in C:\Users\briese\Source\Workspaces\Shared\QuartzServiceLib\QuartzServiceJob.cs:line 168
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at QuartzServiceLib.QuartzServiceJob`1.<>c__DisplayClass32_0.<Execute>b__0() in C:\Users\briese\Source\Workspaces\Shared\QuartzServiceLib\QuartzServiceJob.cs:line 141
+2019-12-12 12:52:22,364 version:(null) [69] INFO QuartzServiceLib.QuartzWrapper - Stopping Quartz Scheduler, waiting for 0 jobs to stop
+2019-12-12 12:52:22,392 version:(null) [69] INFO Quartz.Core.QuartzScheduler - Scheduler DEV-BR-9WYLM32-QuartzService_$_DEV-BR-9WYLM32-QuartzService shutting down.
+2019-12-12 12:52:22,395 version:(null) [69] INFO Quartz.Core.QuartzScheduler - Scheduler DEV-BR-9WYLM32-QuartzService_$_DEV-BR-9WYLM32-QuartzService paused.
+2019-12-12 12:52:22,399 version:(null) [69] INFO QuartzServiceLib.QuartzWrapper - Scheduler Stopped
+2019-12-12 12:52:22,403 version:(null) [148] INFO Quartz.Simpl.RemotingSchedulerExporter - Successfully disconnected remotable scheduler
+2019-12-12 12:52:22,435 version:(null) [148] INFO Quartz.Core.QuartzScheduler - Scheduler DEV-BR-9WYLM32-QuartzService_$_DEV-BR-9WYLM32-QuartzService Shutdown complete.
