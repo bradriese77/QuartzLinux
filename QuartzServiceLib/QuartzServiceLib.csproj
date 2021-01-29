@@ -15,7 +15,7 @@
     <PackageReference Include="System.ComponentModel.Composition" Version="4.6.0" />
     <PackageReference Include="System.Linq" Version="4.3.0" />
     <PackageReference Include="System.Linq.Queryable" Version="4.3.0" />
-    <PackageReference Include="log4net" Version="2.0.8" />
+    <PackageReference Include="log4net" Version="2.0.10" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="QuartzServiceLib.csproj.vspscc" />
